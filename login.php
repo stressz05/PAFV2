@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nif = $conn->real_escape_string($_POST['nif']);
     $password = $conn->real_escape_string($_POST['password']);
     $password2 = $password . '1357';
-
+    
     $sqlPass = "SELECT Password_Dono FROM dono WHERE NIF_Dono = '$nif'";
     $sql_query = $conn->query($sqlPass) or die("Alguma coisa correu mal..." . "<br>" . $conn->error);
     $numPasswords = $sql_query->num_rows;
