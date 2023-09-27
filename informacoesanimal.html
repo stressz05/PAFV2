@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <title>BV | Informações</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body class="body" onload="boasVindas()">
+    <!--* Cria a barra de navegação do Site-->
+    <div class="navBar">
+        <a class="textNavBar" href="informacoesanimal.html">Vacinas</a>
+        <a class="textNavBar" href="associacoes.html">Associações</a>
+        <a class="textNavBar" href="#" id="logout">Log out</a>
+    </div>
+
+    <!--* Cria uma pequena área que irá conter as informações do animal-->
+    <!--! Ainda vai levar alterações quando se ligar à base de dados-->
+
+    <div class="boasVindas">
+        <p id="mensagemBoasVindas"></p>
+    </div>
+    <div class="infoP">
+        <p>Informações básicas do animal: </p>
+    </div>
+    <div class="info">
+        <img id="edit" class="edit" src="assets/imagens/editSquare.png" title="Editar" onclick="editar()">
+        <p id="name">Nome: </p>
+        <p id="age">Idade: <input class="editarInput" type="number" name="ageInput" id="ageInput" hidden>
+            <label id="labelMonth" hidden>|<input type="checkbox" name="typeAge" value="month" id="month">Meses</label>
+            <label id="labelYear" hidden><input type="checkbox" name="typeAge" value="year" id="year" >Anos</label>
+        </p>
+        <p id="size">Tamanho: </p>
+        <p id="weight">Peso:
+            <input class="editarInput" type="text" name="weightInput" id="weightInput" hidden>
+            <a class="confirm" id="confirmar" style="float: right;" hidden href="">Confirmar</a>
+        </p>
+
+    </div>
+
+    <div>
+        <p class="infoP">Vacinas do Animal:</p>
+    </div>
+
+    <div class="centered">
+        <!--* Cria a tabela com as vacinas-->
+        <!--! Ainda vai levar alterações quando se ligar à base de dados-->
+        <table class="table">
+            <tr>
+                <th class="tableHeader">Nome:</th>
+                <th class="tableHeader">Vacinas Aplicadas:</th>
+                <th class="tableHeader">Data:</th>
+            </tr>
+            <tr>
+                <td class="tableRows">UmNome</td>
+                <td class="tableRows">
+                    <select name="IUhgbd" id="12">
+                        <option value="1">Teste</option>
+                        <option value="2">teste 2</option>
+                    </select>
+                </td>
+                <td class="tableRows">12/06/2023</td>
+            </tr>
+            <tr>
+                <td class="tableRows">UmNome</td>
+                <td class="tableRows">
+                    <select name="IUhgbd" id="12">
+                        <option value="1">Teste</option>
+                        <option value="2">teste 2</option>
+                    </select>
+                </td>
+                <td class="tableRows">2</td>
+            </tr>
+            <tr>
+                <td class="tableRows">UmNome</td>
+                <td class="tableRows">
+                    <select name="IUhgbd" id="12">
+                        <option value="1">Teste</option>
+                        <option value="2">teste 2</option>
+                    </select>
+                </td>
+                <td class="tableRows">3</td>
+            </tr>
+            <tr>
+                <td class="tableRows">UmNome</td>
+                <td class="tableRows">
+                    <select name="IUhgbd" id="12">
+                        <option value="1">Teste</option>
+                        <option value="2">teste 2</option>
+                    </select>
+                </td>
+                <td class="tableRows">4</td>
+            </tr>
+            <tr>
+                <td class="tableRows">UmNome</td>
+                <td class="tableRows">
+                    <select name="IUhgbd" id="12">
+                        <option value="1">Teste</option>
+                        <option value="2">teste 2</option>
+                    </select>
+                </td>
+                <td class="tableRows">5</td>
+            </tr>
+            <tr>
+                <td class="tableRows">UmNome</td>
+                <td class="tableRows">
+                    <select name="IUhgbd" id="12">
+                        <option value="1">Teste</option>
+                        <option value="2">teste 2</option>
+                    </select>
+                </td>
+                <td class="tableRows">6</td>
+            </tr>
+        </table>
+    </div>
+</body>
+
+<footer class="footer">
+    Boletim de vacinas &copy; Afonso Almeida 2023
+</footer>
+
+
+<script>
+    function editar() {
+        var age = document.getElementById('ageInput');
+        var weight = document.getElementById('weightInput');
+        var confirmar = document.getElementById('confirmar');
+        var image = document.getElementById('edit');
+        var month = document.getElementById('labelMonth');
+        var year = document.getElementById('labelYear');
+
+        image.style.border = "2px solid black";
+        image.style.padding = "2px"
+        age.hidden = false;
+        weight.hidden = false;
+        confirmar.hidden = false;
+        month.hidden = false;
+        year.hidden = false;
+    }
+
+    function boasVindas() {
+        const username = localStorage.getItem("nome");
+        const boasVindas = document.getElementById("mensagemBoasVindas");
+        boasVindas.textContent = "Olá " + username + "!";
+    }
+
+    if (localStorage.getItem('utilizador_on') !== 'true') {
+        window.location.href = 'index.html';
+    }
+
+    document.getElementById('logout').addEventListener('click', function () {
+        localStorage.removeItem('utilizador_on');
+        window.location.href = 'logout.php';
+    });
+
+</script>
+
+</html>

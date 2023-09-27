@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <title>Boletim de Vacinas</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body class="body">
+    <!--...Coloca a Imagem no site e apresenta uma mensagem ao utilizador-->
+    <div>
+        <img class="logo" src="assets\imagens\logo2.png" alt="Logo do site" title="Logo">
+        <p class="p">Bem vindo(a) ao Boletim de Vacinas para animais de estimação Online!</p>
+    </div>
+    
+    <!--...Cria o formulário de Login e redireciona, caso seja necessário, para o registo-->
+    <div class="centered">
+        <div class="form">
+            <form class="form-center" id="form" method="post" action="login.php">
+                <div>
+                    <p>Login:</p>
+                    <div>
+                        <input class="input" type="text" id="username" name="username" placeholder="Nome de Utilizador"
+                            required>
+                        <br>
+                    </div>
+                    <div>
+                        <input class="input" type="number" id="nif" name="nif" placeholder="NIF" required>
+                        <br>
+                    </div>
+                    <div>
+                        <input class="input" type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="checkboxText">
+                        <label id="MostrarPwd"><input type="checkbox" id="checkboxPwd">Mostrar password</label>
+                    </div>
+                </div>
+                <input class="button" type="submit" value="Login">
+            </form>
+            <div>
+                <p class="label">Não tem conta? <a href="registar.html">Registe-se aqui</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var toggle = document.getElementById('checkboxPwd');
+        var text = document.getElementById('MostrarPwd');
+        toggle.addEventListener("click", checkPwd, false);
+
+        function checkPwd(event) {
+            if (this.checked) {
+                text.style.fontWeight = "bold";
+                text.style.color = "black";
+                password.type = "text";
+            } else {
+                text.style.fontWeight = "normal";
+                text.style.color = "rgb(168, 168, 168)";
+                password.type = "password";
+            }
+        }
+
+        var form = document.getElementById('form');
+        form.addEventListener('submit', function (event) {
+            const nome = document.getElementById('username').value;
+            const nif = document.getElementById('nif').value;
+            const password = document.getElementById('password').value;
+
+            localStorage.setItem("nome", nome);
+
+            if (nome === 'Afonso Almeida' && nif === '275650367' && password === 'afonso05') {
+                localStorage.setItem('utilizador_on', 'true');
+                window.location.href = "informacoesanimal.html";
+            } else {
+                localStorage.setItem('utilizador_on', 'true');
+                window.location.href = "informacoesanimal.html";
+                // alert('Um ou mais campos estão incorretos ou o utilizador não existe.');
+                // event.preventDefault();
+            }
+        }); 
+    </script>
+    <footer class="footer">
+        Boletim de vacinas &copy; Afonso Almeida 2023
+    </footer>
+</body>
+
+</html>
