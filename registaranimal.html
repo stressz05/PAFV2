@@ -18,14 +18,17 @@
         <div class="form">
             <form class="form-center" action="registaranimal.php" method="post">
                 <div>
-                    <p>Registo:</p>
+                    <p class="pForm">Registo:</p>
                     <div>
                         <input class="input" type="text" id="nome" name="nomeAni" placeholder="Nome" required>
                         <br>
                     </div>
                     <div>
                         <input class="input" type="text" id="raca" name="raca" placeholder="Raça" required>
-                        <br>
+                        <div class="checkboxText">
+                            <label><input type="checkbox" name="animal" value="cao" id="cao">Cão</label>
+                            <label><input type="checkbox" name="animal" value="gato" id="gato">Gato</label>
+                        </div>
                     </div>
                     <div>
                         <input class="input" type="number" id="idade" name="idade" placeholder="Idade">
