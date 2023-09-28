@@ -7,6 +7,7 @@
         require "conexao.php";
 
         $ageType = $_POST['typeAge'];
+        $animal = $_POST['animal'];
         
         $nome = $_POST['nomeAni'];
         $raca = $_POST['raca'];
@@ -16,15 +17,25 @@
         $genero = $_POST['genero'];
 
         if($ageType == 'months'){
-            $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida) 
-            VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Meses')";
+            if($animal == 'cao'){
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
+                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Meses', 'Gato')";
+            } else {
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
+                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Meses', 'Gato')";
+            }
         } else if($ageType == 'years') {
-            $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida) 
-            VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos')";
+            if($animal == 'cao'){
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
+                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos', 'Gato')";
+            } else {
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
+                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos', 'Gato')";
+            }
         } else {
             echo "Ups! Alguma coisa correu mal... :/";
         }
-        
+            
         if($conn->query($sql) === TRUE){
             header('Location: index.html');
             exit;
