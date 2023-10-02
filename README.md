@@ -39,7 +39,7 @@ O projeto foi desenvolvido utilizando o Visual Studio Code como IDE.
 
 ## Notas
 
-Este repositório não inclui o ficheiro responsável pela conexão à base de dados com PHP.
+Este repositório **_não inclui_** o ficheiro responsável pela conexão à base de dados com PHP.
 Caso queiras o ficheiro contacta-me.
 
 ## Contribuições
@@ -48,4 +48,4 @@ Contribuições são bem-vindas! Se tiveres sugestões ou melhorias para o proje
 
 ## Contacto
 
-Para qualquer dúvida ou informação adicional, por favor, contacta-me através do e-mail a.sil.almeida@gmail.com ou pelo discord `imstressz`.
+Para qualquer dúvida ou informação adicional, por favor, contacta-me através do _e-mail_ a.sil.almeida[at]gmail[dot]com ou pelo _discord_ `imstressz`.
