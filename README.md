@@ -49,7 +49,7 @@ Contribuições são bem-vindas! Se tiver sugestões ou melhorias para o projeto
 
 ### Contacto
 
-Para qualquer dúvida ou informação adicional, por favor, contacte-me através do _e-mail_ [a.sil.almeida@gmail.com](mailto:a.sil.almeida@gmail.com) ou pelo _discord_ `imstressz`.
+Para qualquer dúvida ou informação adicional, por favor, contacte-me através do _e-mail_ a.sil.almeida@gmail.com ou pelo _discord_ `imstressz`.
 
 ---
 
@@ -104,4 +104,4 @@ Contributions are welcome! If you have any suggestions or improvements for the p
 
 ### Contact
 
-For any questions or additional information, please contact me via _email_ at [a.sil.almeida@gmail.com](mailto:a.sil.almeida@gmail.com) or on _discord_ `imstressz`.
+For any questions or additional information, please contact me via _email_ at a.sil.almeida@gmail.com or on _discord_ `imstressz`.
