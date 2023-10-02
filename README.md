@@ -19,7 +19,7 @@ O objetivo deste projeto é criar um website chamado "Boletim de Vacinas", o sit
 
 ## Como Utilizar
 
-1. Faz um clone deste repositório: `git clone https://github.com/stressz05/PAFV2`
+1. Faz **download** dos ficheiros deste repositório.
 2. Coloca os ficheiros na pasta "htdocs" do XAMPP.
 3. Abre o XAMPP.
 4. Corre o Apache e MySQL
