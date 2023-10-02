@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if(!isset($_SESSION['loggedin'])){
+        header("Location: index.html");
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt-pt">
 
@@ -16,10 +24,21 @@
     </div>
 
     <div class="boasVindas">
-        <p id="mensagemBoasVindas"></p>
+        <p>Olá 
+        <?php 
+            if ($_SESSION['tipoUser'] === 'dono') {
+                print($_SESSION['nome_dono']);
+            } else {
+                echo $_SESSION['nome_vet'];
+            }
+        ?>!</p>
     </div>
 
-    <!--* Cria uma pequena área que irá conter as informações do animal-->
+    <!-- <div class="boasVindas">
+        <p id="mensagemBoasVindas"></p>
+    </div> -->
+
+    <!--! Cria uma pequena área que irá conter as informações do animal-->
     <!--! Ainda vai levar alterações quando se ligar à base de dados-->
 
     <div class="infoP">

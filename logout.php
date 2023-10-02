@@ -20,8 +20,9 @@
 </html>
 
 <?php
-session_start();
-session_destroy();
-echo '<div class="centered">Logout efetuado com sucesso!</div>'
-    . '<br>' . '<a class="centered" href="/">Voltar ao Início</a>';
+    session_start();
+    if(isset($_SESSION['loggedin'])){
+        session_destroy();
+    }
+    echo '<div class="centered">Logout efetuado com sucesso!</div>' . '<br>' . '<a class="centered" href="/">Voltar ao Início</a>';
 ?>

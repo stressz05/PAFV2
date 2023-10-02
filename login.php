@@ -10,29 +10,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nif = $conn->real_escape_string($_POST['nif']);
     $password = $conn->real_escape_string($_POST['password']);
     $password2 = $password . '1357';
-    
+
     $sqlPass = "SELECT Password_Dono FROM dono WHERE NIF_Dono = '$nif'";
     $sql_query = $conn->query($sqlPass) or die("Alguma coisa correu mal..." . "<br>" . $conn->error);
     $numPasswords = $sql_query->num_rows;
 
+
+    //! Procura e testa as passwords
     if ($numPasswords == 1) {
         $row = $sql_query->fetch_assoc();
         $passwordhash = $row['Password_Dono'];
         $passwordFinal = password_verify($password2, $passwordhash);
-        echo $password2 . "<br>";
-        echo password_hash($password2, PASSWORD_BCRYPT) . "<br>";
-        echo $passwordhash . "<br>";
     } else {
         $sqlPass = "SELECT Password_Vet FROM veterinario WHERE NIF_Vet = '$nif'";
         $sql_query = $conn->query($sqlPass) or die("Alguma coisa correu mal..." . "<br>" . $conn->error);
         $numPasswords = $sql_query->num_rows;
-        if($numPasswords == 1){
+        if ($numPasswords == 1) {
             $row = $sql_query->fetch_assoc();
             $passwordhash = $row['Password_Vet'];
             $passwordFinal = password_verify($password2, $passwordhash);
         }
     }
 
+    //! Caso encontre a password efetua o login do utilizador
     if ($passwordFinal == TRUE) {
 
         //? Seleciona todos os valores onde existe o nif
@@ -47,9 +47,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         //? Testa a variavel "numUsers" e vê se o resultado é 1
         if ($numUsers == 1) {
             $row = $sql_query->fetch_assoc();
-            $nif = $row['NIF_Dono'];
-            $user = $row['Nome_Dono'];
-            session_start();
+
+            if(!isset($_SESSION)){ //? isset -> função do php que devolve true se uma variável estiver definida
+                session_start();
+                $_SESSION['loggedin'] = true;
+            }
+            
+            $_SESSION['tipoUser'] = 'dono';
+            $_SESSION['nif_dono'] = $row['NIF_Dono'];
+            $_SESSION['nome_dono'] = $row['Nome_Dono'];
+
             header("Location: informacoesanimal.php");
         } else {
             //? Seleciona todos os valores onde existe o nif e a password
@@ -61,9 +68,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             if ($numUsers == 1) {
                 $row = $sql_query->fetch_assoc();
-                $nif = $row['NIF_Vet'];
-                $user = $row['Nome_Vet'];
-                session_start();
+
+                if(!isset($_SESSION)){
+                    session_start();
+                    $_SESSION['loggedin'] = true;
+                }
+
+                $_SESSION['tipoUser'] = 'vet';
+                $_SESSION['nif_vet'] = $row['NIF_Vet'];
+                $_SESSION['nome_vet'] = $row['Nome_Vet'];
+
                 header("Location: informacoesanimal.php");
             } else {
                 echo "Falha ao fazer login! Causa:" . "<br>Nif ou Password Incorretos!" . "<br>Nenhum Utilizador existe!";
