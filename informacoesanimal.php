@@ -10,8 +10,8 @@
 <body class="body" onload="boasVindas()">
     <!--* Cria a barra de navegação do Site-->
     <div class="navBar">
-        <a class="textNavBar" href="informacoesanimal.html">Vacinas</a>
-        <a class="textNavBar" href="associacoes.html">Associações</a>
+        <a class="textNavBar" href="informacoesanimal.php">Vacinas</a>
+        <a class="textNavBar" href="associacoes.php">Associações</a>
         <a class="textNavBar" href="#" id="logout">Log out</a>
     </div>
 

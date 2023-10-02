@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <input class="button" type="submit" value="Registar">
-                <p class="label"><a href="registar.html">Voltar atrás</a></p>
+                <p class="label"><a href="registarform.php">Voltar atrás</a></p>
             </form>
         </div>
     </div>
