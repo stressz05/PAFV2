@@ -24,7 +24,7 @@
     </div>
 
     <div class="boasVindas">
-        <p>Olá <?php ($_SESSION['tipoUser'] === 'dono') ? $_SESSION['nome_dono'] : $_SESSION['nome_vet']; ?>!</p>
+        <p>Olá <?php ($_SESSION['tipoUser'] === 'dono') ? $_SESSION['nome_dono'] : $_SESSION['nome_vet'];?>!</p>
     </div>
 
     <!-- <div class="boasVindas">
