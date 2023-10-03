@@ -13,9 +13,7 @@
     </div>
 </body>
 
-<footer class="footer">
-    Boletim de vacinas &copy; Afonso Almeida 2023
-</footer>
+<?php include "footer.php";?>
 
 </html>
 

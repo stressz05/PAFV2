@@ -129,11 +129,6 @@
 </body>
 
 <script>
-    // document.getElementById('logout').addEventListener('click', function () {
-    //     localStorage.removeItem('utilizador_on');
-    //     window.location.href = 'logout.php';
-    // });
-
     var linksMapa = {
         associacao1: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.0307667004345!2d-9.1280019!3d38.74005619999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1933bbf9746c81%3A0xd956f08c3b83914b!2sSociedade%20Protectora%20dos%20Animais%20-%20Centro%20Veterin%C3%A1rio%20Areeiro!5e0!3m2!1spt-PT!2spt!4v1694268326856!5m2!1spt-PT!2spt",
         associacao2: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3112.022260442806!2d-9.1708676!3d38.7402514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd19333ce84f9fa9%3A0x4899d670984bf28d!2zVW5pw6NvIFpvw7NmaWxh!5e0!3m2!1spt-PT!2spt!4v1694268358594!5m2!1spt-PT!2spt",
@@ -179,8 +174,6 @@
     });
 </script>
 
-<footer class="footer">
-    Boletim de vacinas &copy; Afonso Almeida 2023
-</footer>
+<?php include "assets/files/footer.php";?>
 
 </html>
