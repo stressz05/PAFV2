@@ -17,12 +17,8 @@ if (!isset($_SESSION['loggedin'])) {
 
 <body class="body" onload="boasVindas()">
     <!--* Cria a barra de navegação do Site-->
-    <div class="navBar">
-        <a class="textNavBar" href="informacoesanimal.php">Vacinas</a>
-        <a class="textNavBar" href="associacoes.php">Associações</a>
-        <a class="textNavBar" href="#" id="logout">Log out</a>
-    </div>
-
+    <?php include "assets/files/navbar.php"; ?>
+   
     <div class="boasVindas">
         <p><strong>Olá</strong> <?php ($_SESSION['tipoUser'] === 'dono') ? print($_SESSION['nome_dono']) : print($_SESSION['nome_vet']);?>!</p>
     </div>

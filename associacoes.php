@@ -16,11 +16,7 @@
 </head>
 
 <body class="body">
-    <div class="navBar">
-        <a class="textNavBar" href="informacoesanimal.php">Vacinas</a>
-        <a class="textNavBar" href="associacoes.php">Associações</a>
-        <a class="textNavBar" href="#" id="logout">Log out</a>
-    </div>
+    <?php include "assets/files/navbar.php"; ?>
 
     <div class="centered">
         <p class="p-associacoes"><strong>Associações 1-3:</strong> Lisboa || <strong>Associações 4-6:</strong> Porto</p>
