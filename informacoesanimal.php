@@ -1,9 +1,9 @@
 <?php
-    session_start();
+session_start();
 
-    if(!isset($_SESSION['loggedin'])){
-        header("Location: index.html");
-    }
+if (!isset($_SESSION['loggedin'])) {
+    header("Location: index.html");
+}
 ?>
 
 <!DOCTYPE html>
@@ -24,12 +24,8 @@
     </div>
 
     <div class="boasVindas">
-        <p>Olá <?php ($_SESSION['tipoUser'] === 'dono') ? $_SESSION['nome_dono'] : $_SESSION['nome_vet'];?>!</p>
+        <p><strong>Olá</strong> <?php ($_SESSION['tipoUser'] === 'dono') ? print($_SESSION['nome_dono']) : print($_SESSION['nome_vet']);?>!</p>
     </div>
-
-    <!-- <div class="boasVindas">
-        <p id="mensagemBoasVindas"></p>
-    </div> -->
 
     <!--! Cria uma pequena área que irá conter as informações do animal-->
     <!--! Ainda vai levar alterações quando se ligar à base de dados-->
@@ -42,7 +38,7 @@
         <p id="name">Nome: </p>
         <p id="age">Idade: <input class="editarInput" type="number" name="ageInput" id="ageInput" hidden>
             <label id="labelMonth" hidden>|<input type="checkbox" name="typeAge" value="month" id="month">Meses</label>
-            <label id="labelYear" hidden><input type="checkbox" name="typeAge" value="year" id="year" >Anos</label>
+            <label id="labelYear" hidden><input type="checkbox" name="typeAge" value="year" id="year">Anos</label>
         </p>
         <p id="size">Tamanho: </p>
         <p id="weight">Peso:
@@ -53,7 +49,7 @@
     </div>
 
     <div class="infoP">
-        <p >Vacinas do Animal:</p>
+        <p>Vacinas do Animal:</p>
     </div>
 
     <div class="centered">
@@ -74,13 +70,13 @@
                 </ul>
                 <p class="numAssociacao">Gato</p> <!--! Serve para identificação, irá ser removido no futuro-->
                 <p class="checkboxVac"><input type="checkbox" name="yes" id="second">Aplicada</p>
-            </div>    
+            </div>
 
             <div class="t-row">
                 <p class="pBlocks">Vacina contra a leucemia felina</p>
                 <p class="numAssociacao">Gato</p> <!--! Serve para identificação, irá ser removido no futuro-->
                 <p class="checkboxVac"><input type="checkbox" name="yes" id="third">Aplicada</p>
-            </div>     
+            </div>
 
             <div class="t-row">
                 <p class="pBlocks">Vacina contra a clamidiose felina</p>
@@ -102,10 +98,10 @@
 
             <div class="t-row">
                 <p class="pBlocks">Vacina contra a tosse dos canis</p>
-                <p class="pBlocks">(Traqueobronquite infecciosa canina)</p>                
+                <p class="pBlocks">(Traqueobronquite infecciosa canina)</p>
                 <p class="numAssociacao">Cão</p> <!--! Serve para identificação, irá ser removido no futuro-->
                 <p class="checkboxVac"><input type="checkbox" name="yes" id="sixth">Aplicada</p>
-            </div> 
+            </div>
 
             <div class="t-row">
                 <p class="pBlocks">Vacina contra a doença de Lyme</p>
@@ -150,11 +146,10 @@
         window.location.href = 'index.html';
     }
 
-    document.getElementById('logout').addEventListener('click', function () {
+    document.getElementById('logout').addEventListener('click', function() {
         localStorage.removeItem('utilizador_on');
         window.location.href = 'logout.php';
     });
-
 </script>
 
 </html>
