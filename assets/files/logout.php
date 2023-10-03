@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="/stylesheet.css">
     <title>BV | Logout</title>
 </head>
 
