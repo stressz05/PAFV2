@@ -45,7 +45,7 @@
                         <input name="tipoUser" type="radio" id="vet" value="veterinario">
                         <label for="vet">Veterinário</label>
                     </div>
-                    <button class="button" type="submit" onclick="selecao(event)">Registar</button>
+                    <button class="button" type="submit">Registar</button>
                 </div>
             </form>
             <div class="label">
@@ -71,32 +71,6 @@
                 password.type = "password";
                 cPassword.type = "password";
             }
-        }
-
-        function selecao(event) {
-            var selDono = document.getElementById('dono')
-            var selVet = document.getElementById('vet');
-
-            var username = document.getElementById('username').value;
-            var nif = document.getElementById('nif').value;
-            var password = document.getElementById('password').value;
-            var cPassword = document.getElementById('cPassword').value;
-
-            // if(selDono.checked && username !== '' && nif !== '' && password !== '' && cPassword !== '') {
-            //     if(cPassword !== password) {
-            //         alert('As passwords não coincidem!');
-            //         event.preventDefault();
-            //     } else {
-            //         //window.location.href = "registaranimal.php";
-            //     }
-            // } else if(selVet.checked && username !== '' && nif !== '' && password !== '' && cPassword !== '') {
-            //     if(cPassword !== password) {
-            //         alert('As passwords não coincidem!');
-            //         event.preventDefault();
-            //     } else {
-            //         //window.location.href = "index.html";
-            //     }                
-            // }
         }
     </script>
 </body>

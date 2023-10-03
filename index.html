@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang="pt">
 
 <head>
     <title>Boletim de Vacinas</title>
@@ -60,25 +60,6 @@
                 password.type = "password";
             }
         }
-
-        var form = document.getElementById('form');
-        form.addEventListener('submit', function (event) {
-            const nome = document.getElementById('username').value;
-            const nif = document.getElementById('nif').value;
-            const password = document.getElementById('password').value;
-
-            localStorage.setItem("nome", nome);
-
-            if (nome === 'Afonso Almeida' && nif === '275650367' && password === 'afonso05') {
-                localStorage.setItem('utilizador_on', 'true');
-                window.location.href = "informacoesanimal.php";
-            } else {
-                localStorage.setItem('utilizador_on', 'true');
-                window.location.href = "informacoesanimal.php";
-                // alert('Um ou mais campos estão incorretos ou o utilizador não existe.');
-                // event.preventDefault();
-            }
-        }); 
     </script>
     <footer class="footer">
         Boletim de vacinas &copy; Afonso Almeida 2023

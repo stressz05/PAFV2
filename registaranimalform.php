@@ -1,6 +1,6 @@
 <!--* Página que vai aparecer caso o utilizador seja um Dono-->
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang="pt">
 
 <head>
     <title>BV | Registo</title>

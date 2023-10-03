@@ -7,7 +7,7 @@ if (!isset($_SESSION['loggedin'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-pt">
+<html lang="pt">
 
 <head>
     <title>BV | Informações</title>
