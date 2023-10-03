@@ -26,7 +26,7 @@
             $sql = "INSERT INTO dono (Nome_Dono, Password_Dono, NIF_Dono) VALUES ('$dono_username','$d_passwordCompleta','$dono_nif')";
         
             if ($conn->query($sql) === TRUE) {
-                header('Location: registaranimalform.php');
+                header('Location: /registaranimalform.php');
                 exit;
             } else {
                 echo "Erro." . $sql . "<br>" . $conn->error;
@@ -50,7 +50,7 @@
                         VALUES ('$vet_username','$v_passwordCompleta','$vet_nif')";
     
             if($conn->query($sql) === TRUE){
-                header('Location: index.html');
+                header('Location: /index.html');
                 exit;
             } else {
                 echo "Erro." . $sql . "<br>" . $conn->error;

@@ -16,7 +16,7 @@
     
     <div class="centered">
         <div class="form">
-            <form class="form-center" action="registaranimal.php" method="post">
+            <form class="form-center" action="assets/files/registaranimal.php" method="post">
                 <div>
                     <p class="pForm">Registo:</p>
                     <div>

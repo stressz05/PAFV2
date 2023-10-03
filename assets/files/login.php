@@ -57,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['nif_dono'] = $row['NIF_Dono'];
             $_SESSION['nome_dono'] = $row['Nome_Dono'];
 
-            header("Location: informacoesanimal.php");
+            header("Location: /informacoesanimal.php");
         } else {
             //? Seleciona todos os valores onde existe o nif e a password
             $sql = "SELECT * FROM veterinario WHERE Nome_Vet = '$username' AND NIF_Vet = '$nif'";
@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['nif_vet'] = $row['NIF_Vet'];
                 $_SESSION['nome_vet'] = $row['Nome_Vet'];
 
-                header("Location: informacoesanimal.php");
+                header("Location: /informacoesanimal.php");
             } else {
                 echo "Falha ao fazer login! Causa:" . "<br>Nif ou Password Incorretos!" . "<br>Nenhum Utilizador existe!";
             }

@@ -131,21 +131,6 @@ if (!isset($_SESSION['loggedin'])) {
         month.hidden = false;
         year.hidden = false;
     }
-
-    function boasVindas() {
-        const username = localStorage.getItem("nome");
-        const boasVindas = document.getElementById("mensagemBoasVindas");
-        boasVindas.textContent = "Olá " + username + "!";
-    }
-
-    if (localStorage.getItem('utilizador_on') !== 'true') {
-        window.location.href = 'index.html';
-    }
-
-    document.getElementById('logout').addEventListener('click', function() {
-        localStorage.removeItem('utilizador_on');
-        window.location.href = 'logout.php';
-    });
 </script>
 
 </html>

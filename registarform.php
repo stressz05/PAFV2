@@ -16,7 +16,7 @@
     <!--* centra e cria o formulário de registo-->
     <div class="centered">
         <div class="form">
-            <form class="form-center" action="registar.php" method="post">
+            <form class="form-center" action="assets/files/registar.php" method="post">
                 <div>
                     <p class="pForm">Registo:</p>
                     <div>
