@@ -53,7 +53,7 @@
             </div>
         </div>
     </div>
-    <!--* Este script serve para confirmar se as passwords coincidem ou não, támbem verifica se o utilizado é ou não é um veterinário-->
+    
     <script>
         var toggle = document.getElementById('checkboxPwd');
         var text = document.getElementById('MostrarPwd');
