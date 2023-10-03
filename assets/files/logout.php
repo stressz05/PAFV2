@@ -9,7 +9,7 @@
 
 <body class="body">
     <div>
-        <img class="logo" src="assets\imagens\logo2.png" alt="Logo do site" title="Logo">
+        <img class="logo" src="/assets/imagens/logo2.png" alt="Logo do site" title="Logo">
     </div>
 </body>
 
