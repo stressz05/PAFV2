@@ -44,6 +44,7 @@ Este repositório **_não_inclui_** todos os arquivos necessários para o funcio
 Os arquivos em falta são:
 - `verificacao.php`
 - `conexao.php`
+
 Decidi não colocá-los principalmente por razões de segurança.
 Caso queira os ficheiros, peço que entre em contacto comigo.
 
@@ -103,6 +104,7 @@ This repository **_does_not include_** all the files necessary for the site to f
 The missing files are:
 - `verificacao.php`
 - `conexao.php`
+
 It was decided by me not to place them mainly for safety reasons.
 If you want the files, please contact me.
 
