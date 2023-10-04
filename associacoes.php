@@ -1,9 +1,5 @@
 <?php
-    session_start();
-
-    if(!isset($_SESSION['loggedin'])){
-        header("Location: index.html");
-    }
+    require "assets/files/verificacao.php";
 ?>
 
 <!DOCTYPE html>
