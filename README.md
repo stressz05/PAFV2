@@ -40,8 +40,12 @@ O projeto foi desenvolvido utilizando o Visual Studio Code como IDE.
 
 ### Notas
 
-Este repositório **_não inclui_** o ficheiro responsável pela conexão à base de dados com PHP.
-Caso queira o ficheiro contacte-me.
+Este repositório **_não_inclui_** todos os arquivos necessários para o funcionamento do site.
+Os arquivos em falta são:
+- `verificacao.php`
+- `conexao.php`
+Decidi não colocá-los principalmente por razões de segurança.
+Caso queira os ficheiros, peço que entre em contacto comigo.
 
 ### Contribuições
 
@@ -95,8 +99,12 @@ The project was developed using Visual Studio Code as the IDE.
 
 ### Notes
 
-This repository **_does not include_** the file responsible for the PHP database connection.
-If you need the file, please contact me.
+This repository **_does_not include_** all the files necessary for the site to function.
+The missing files are:
+- `verificacao.php`
+- `conexao.php`
+It was decided by me not to place them mainly for safety reasons.
+If you want the files, please contact me.
 
 ### Contributions
 
