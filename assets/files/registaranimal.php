@@ -29,7 +29,7 @@
                 $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
                 VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos', 'Cão')";
             } else {
-                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
+                $sql = "INSERT INTO animal (N   ome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
                 VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos', 'Gato')";
             }
         } else {
