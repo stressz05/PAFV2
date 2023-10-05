@@ -19,7 +19,7 @@
         if($ageType == 'months'){
             if($animal == 'cao'){
                 $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
-                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Meses', 'Gato')";
+                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Meses', 'Cão')";
             } else {
                 $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
                 VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Meses', 'Gato')";
@@ -27,7 +27,7 @@
         } else if($ageType == 'years') {
             if($animal == 'cao'){
                 $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
-                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos', 'Gato')";
+                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos', 'Cão')";
             } else {
                 $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
                 VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos', 'Gato')";
@@ -37,7 +37,7 @@
         }
             
         if($conn->query($sql) === TRUE){
-            header('Location: index.html');
+            header('Location: /index.html');
             exit;
         } else {
             echo "Erro." . $sql . "<br>" . $conn->error;
