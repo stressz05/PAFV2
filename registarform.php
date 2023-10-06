@@ -50,7 +50,7 @@
                 </div>
             </form>
             <div class="label">
-                <p>Já tem conta? <a href="index.html">Login</a></p>
+                <p>Já tem conta? <a href="/">Login</a></p>
             </div>
         </div>
     </div>
