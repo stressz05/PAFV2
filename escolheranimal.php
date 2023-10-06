@@ -1,3 +1,14 @@
+<?php 
+    require "assets/files/verificacao.php";
+
+    if(isset($_SESSION['loggedin'])){
+        if($_SESSION['tipoUser'] === 'dono'){
+            header("Location: assets/files/acessonegado.php");
+            exit;
+        }
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="pt">
 
@@ -8,6 +19,8 @@
     <title>BV / Escolher</title>
 </head>
 <body class="body">
+    <?php include "assets/files/navbar.php" ?>
     <p>ESCOLHER</p>
+    <?php include "assets/files/footer.php" ?>
 </body>
 </html>
