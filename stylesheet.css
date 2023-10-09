@@ -129,7 +129,6 @@ input::-webkit-outer-spin-button {
 .tableHeader {
     border: 1px solid black;
     padding: 8px;
-    text-align: center;
     background-color: whitesmoke;
     font-size: 20px;
 }
@@ -137,7 +136,6 @@ input::-webkit-outer-spin-button {
 .tableRows {
     border: 1px solid black;
     padding: 8px;
-    text-align: left;
     background-color: whitesmoke;
     font-size: 18px;
     font-weight: 500;
