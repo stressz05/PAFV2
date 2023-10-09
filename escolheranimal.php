@@ -22,6 +22,9 @@ if (isset($_SESSION['loggedin'])) {
 <body class="body">
     <?php include "assets/files/navbar.php" ?>
     <div class="centered">
+        <p class="p"><span style="color:crimson">AVISO!</span> Só aparecem animais sem veterinário associado</p>
+    </div>
+    <div class="centered">
         <table class="table">
             <tr>
                 <th class="tableHeader">ID</th>
@@ -32,7 +35,6 @@ if (isset($_SESSION['loggedin'])) {
                 <th class="tableHeader">Peso</th>
                 <th class="tableHeader">Tamanho</th>
                 <th class="tableHeader">Género</th>
-                <th class="tableHeader">NIF do Dono</th>
                 <th class="tableHeader">Nome Dono</th>
             </tr>
             <?php
@@ -44,25 +46,32 @@ if (isset($_SESSION['loggedin'])) {
             if ($sql_query !== false) {
                 while ($linhas = $sql_query->fetch_assoc()) {
                     $nif_dono = $linhas['NIF_Dono'];
+                    $nif_vet = $linhas['NIF_Vet'];
                     $sql = "SELECT Nome_Dono FROM dono WHERE NIF_Dono = $nif_dono";
                     $sql_query_dono = $conn->query($sql);
-
+                    
                     if ($sql_query_dono !== false) {
                         $linhas_dono = $sql_query_dono->fetch_assoc();
                         $nome_dono = $linhas_dono['Nome_Dono'];
                     }
 
+                    //. Verifica se a coluna onde está o NIF do dono está vazia, se não estiver 
+                    //. pula a iteração do loop e não imprime a linha do animal.
+                    
+                    if(!empty($nif_vet)){
+                        continue;
+                    }
+
                     echo "<tr>";
-                    echo "<td class='tableRows'>" . $linhas['ID_Animal'] . "</td>";
-                    echo "<td class='tableRows'>" . $linhas['Nome'] . "</td>";
-                    echo "<td class='tableRows'>" . $linhas['Raca'] . "</td>";
-                    echo "<td class='tableRows'>" . $linhas['Tipo_Animal'] . "</td>";
-                    echo "<td class='tableRows'>" . $linhas['Idade'] . " " . $linhas['Idade_Medida'] . "</td>";
-                    echo "<td class='tableRows'>" . $linhas['Peso'] . "</td>";
-                    echo "<td class='tableRows'>" . $linhas['Tamanho'] . "</td>";
-                    echo "<td class='tableRows'>" . $linhas['Genero'] . "</td>";
-                    echo "<td class='tableRows'>" . $linhas['NIF_Dono'] . "</td>";
-                    echo "<td class='tableRows'>" . $nome_dono . "</td>";
+                    echo "<td class='tableRows' style='text-align: center'>" . $linhas['ID_Animal'] . "</td>";
+                    echo "<td class='tableRows' style='text-align: center'>" . $linhas['Nome'] . "</td>";
+                    echo "<td class='tableRows' style='text-align: center'>" . $linhas['Raca'] . "</td>";
+                    echo "<td class='tableRows' style='text-align: center'>" . $linhas['Tipo_Animal'] . "</td>";
+                    echo "<td class='tableRows' style='text-align: center'>" . $linhas['Idade'] . " " . $linhas['Idade_Medida'] . "</td>";
+                    echo "<td class='tableRows' style='text-align: center'>" . $linhas['Peso'] . "Kg" . "</td>";
+                    echo "<td class='tableRows' style='text-align: center'>" . $linhas['Tamanho'] . "</td>";
+                    echo "<td class='tableRows' style='text-align: center'>" . $linhas['Genero'] . "</td>";
+                    echo "<td class='tableRows' style='text-align: center'>" . $nome_dono . "</td>";
                     echo "</tr>";
                 }
             }
@@ -71,10 +80,10 @@ if (isset($_SESSION['loggedin'])) {
     </div>
 
     <div class="centered">
-        <form action="#" class="form-center">
+        <form action="assets/files/escolhaAnimal.php" method="post" class="form-center">
             <p class="label">Escolha o ID de um animal: </p>
             <input type="number" class="input" name="ID_animal" id="idanimal" placeholder="ex. 1">
-            <input type="button" value="Escolher" class="btnEscolherAnimal">
+            <input type="submit" value="Escolher" class="btnEscolherAnimal">
         </form>
     </div>
     <?php include "assets/files/footer.php" ?>
