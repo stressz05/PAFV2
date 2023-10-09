@@ -82,7 +82,7 @@ if (isset($_SESSION['loggedin'])) {
     <div class="centered">
         <form action="assets/files/escolhaAnimal.php" method="post" class="form-center">
             <p class="label">Escolha o ID de um animal: </p>
-            <input type="number" class="input" name="ID_animal" id="idanimal" placeholder="ex. 1">
+            <input type="number" class="input" name="ID_animal" id="idanimal" placeholder="ex. 1" required>
             <input type="submit" value="Escolher" class="btnEscolherAnimal">
         </form>
     </div>
