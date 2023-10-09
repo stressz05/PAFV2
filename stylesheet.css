@@ -55,10 +55,10 @@
 } 
 
 .button:hover{
-        border-color: #000000;
-        transform: scale(1.55);
-        background-color: #fff;
-        cursor: pointer;
+    border-color: #000000;
+    transform: scale(1.55);
+    background-color: #fff;
+    cursor: pointer;
 }
 
 
