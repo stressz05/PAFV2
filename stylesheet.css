@@ -52,13 +52,12 @@
     transform: scale(1.5);
     border-color: #f8eba3;
     background-color: #f8eba3;   
-}
-
-.button:hover {
-    border-color: #000000;
-    transform: scale(1.55);
-    background-color: #fff;
-    cursor: pointer;
+    :hover {
+        border-color: #000000;
+        transform: scale(1.55);
+        background-color: #fff;
+        cursor: pointer;
+    }
 }
 
 .centered {
@@ -77,7 +76,7 @@
 
 .form {
     width: 350px;
-    height: 500px;
+    height: fit-content;
     background-color: whitesmoke;
     box-shadow: 0 0 15px black;
     border-color: lightgray;
@@ -296,4 +295,16 @@ input::-webkit-outer-spin-button {
     display: flex;
     flex-direction: row;
     justify-content: baseline;
+}
+
+.btnEscolherAnimal{
+    background-color: #fff;
+    width: fit-content;
+    border-radius: 15px;
+    :hover {
+    border-color: #000000;
+    transform: scale(1.55);
+    background-color: #fff;
+    cursor: pointer;
+    }
 }
