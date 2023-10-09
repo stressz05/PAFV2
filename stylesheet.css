@@ -51,14 +51,16 @@
     margin-top: auto;
     transform: scale(1.5);
     border-color: #f8eba3;
-    background-color: #f8eba3;   
-    :hover {
+    background-color: #f8eba3;  
+} 
+
+.button:hover{
         border-color: #000000;
         transform: scale(1.55);
         background-color: #fff;
         cursor: pointer;
-    }
 }
+
 
 .centered {
     display: flex;
@@ -301,10 +303,11 @@ input::-webkit-outer-spin-button {
     background-color: #fff;
     width: fit-content;
     border-radius: 15px;
-    :hover {
+}
+
+.btnEscolherAnimal:hover {
     border-color: #000000;
     transform: scale(1.55);
     background-color: #fff;
     cursor: pointer;
-    }
 }
