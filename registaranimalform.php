@@ -39,7 +39,7 @@
                         <label><input type="checkbox" name="typeAge" value="years" id="years">Anos</label>
                     </div>
                     <div>
-                        <input class="input" type="number" id="peso" name="peso" placeholder="Peso" required>
+                        <input class="input" type="text" id="peso" name="peso" placeholder="Peso" required>
                     </div>
                     <div>
                         <input class="input" type="text" id="tamanho" name="tamanho" placeholder="Tamanho" required>
