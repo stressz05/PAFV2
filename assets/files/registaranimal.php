@@ -5,6 +5,9 @@
 <?php
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         require "conexao.php";
+        if(!isset($_SESSION)){
+            session_start();
+        }
 
         $ageType = $_POST['typeAge'];
         $animal = $_POST['animal'];
@@ -15,22 +18,24 @@
         $peso = $_POST['peso'];
         $tamanho = $_POST['tamanho'];
         $genero = $_POST['genero'];
+        
+        $nif = $_SESSION['NIF'];
 
         if($ageType == 'months'){
             if($animal == 'cao'){
-                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
-                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Meses', 'Cão')";
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal, NIF_Dono) 
+                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Meses', 'Cão', '$nif')";
             } else {
-                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
-                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Meses', 'Gato')";
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal, NIF_Dono) 
+                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Meses', 'Gato', '$nif')";
             }
         } else if($ageType == 'years') {
             if($animal == 'cao'){
-                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
-                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos', 'Cão')";
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal, NIF_Dono) 
+                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos', 'Cão', '$nif')";
             } else {
-                $sql = "INSERT INTO animal (N   ome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal) 
-                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos', 'Gato')";
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal, NIF_Dono) 
+                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos', 'Gato', '$nif')";
             }
         } else {
             echo "Ups! Alguma coisa correu mal... :/";

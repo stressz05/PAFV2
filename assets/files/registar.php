@@ -17,6 +17,11 @@
                 $d_password = $_POST['password'];
                 $d_password2 = $d_password . '1357';
                 $d_passwordCompleta = password_hash($d_password2, PASSWORD_BCRYPT);
+
+                if(!isset($_SESSION)){
+                    session_start();
+                    $_SESSION['NIF'] = $dono_nif;
+                }
             } else {
                 echo '<script>alert("As passwords não correspondem!")</script>';
                 echo "Erro no registo.";
@@ -56,10 +61,6 @@
                 echo "Erro." . $sql . "<br>" . $conn->error;
             }
         }
-
-        header('Location: registaranimal.php?donoNif = &dono_nif');
-        header('Location: registaranimal.php?vetNif = $vet_nif');
-
         $conn->close();
     } else {
         echo("Acesso não autorizado.");
