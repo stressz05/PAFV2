@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $_SESSION['nif_vet'] = $row['NIF_Vet'];
                 $_SESSION['nome_vet'] = $row['Nome_Vet'];
 
-                header("Location: /informacoesanimal.php");
+                header("Location: /escolheranimal.php");
             } else {
                 echo "Falha ao fazer login! Causa:" . "<br>Nif ou Password Incorretos!" . "<br>Nenhum Utilizador existe!";
             }
