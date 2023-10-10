@@ -14,7 +14,7 @@
         <img class="logo" src="assets\imagens\logo2.png" alt="Logo do site" title="Logo">
         <p class="p">Bem vindo(a) ao Boletim de Vacinas para animais de estimação Online!</p>
     </div>
-    
+
     <div class="centered">
         <div class="form">
             <form class="form-center" action="assets/files/registaranimal.php" method="post">
@@ -47,14 +47,16 @@
                     <div>
                         <input class="input" type="text" id="genero" name="genero" placeholder="Género" required>
                     </div>
+                    <button class="button" type="submit">Registar</button>
                 </div>
-                <input class="button" type="submit" value="Registar">
-                <p class="label"><a href="registarform.php">Voltar atrás</a></p>
             </form>
+            <div class="label">
+                <p><a href="registarform.php">Voltar atrás</a></p>
+            </div>
         </div>
     </div>
 </body>
 
-<?php include "assets/files/footer.php";?>
+<?php include "assets/files/footer.php"; ?>
 
 </html>
