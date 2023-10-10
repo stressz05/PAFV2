@@ -301,13 +301,17 @@ input::-webkit-outer-spin-button {
 
 .btnEscolherAnimal{
     background-color: #fff;
+    border-color: #fff;
     width: fit-content;
+    transform: scale(1.25);
     border-radius: 15px;
+    align-self: center;
+    margin-top: 10px;
 }
 
 .btnEscolherAnimal:hover {
     border-color: #000000;
-    transform: scale(1.55);
+    transform: scale(1.30);
     background-color: #fff;
     cursor: pointer;
 }
