@@ -48,13 +48,13 @@
     <div class="centered">
         <div class="block">
             <!--! Gatos-->
-            <div class="t-row">
+            <div class="b-row">
                 <p class="pBlocks">Vacina contra a raiva</p>
                 <p class="numAssociacao">Gato e Cão</p> <!--! Serve para identificação, irá ser removido no futuro-->
                 <p class="checkboxVac"><input type="checkbox" name="yes" id="first">Aplicada</p>
             </div>
 
-            <div class="t-row">
+            <div class="b-row">
                 <p class="pBlocks">Vacina tríplice</p>
                 <ul class="pBlocks">
                     <li>Panleucopenia</li>
@@ -65,19 +65,19 @@
                 <p class="checkboxVac"><input type="checkbox" name="yes" id="second">Aplicada</p>
             </div>
 
-            <div class="t-row">
+            <div class="b-row">
                 <p class="pBlocks">Vacina contra a leucemia felina</p>
                 <p class="numAssociacao">Gato</p> <!--! Serve para identificação, irá ser removido no futuro-->
                 <p class="checkboxVac"><input type="checkbox" name="yes" id="third">Aplicada</p>
             </div>
 
-            <div class="t-row">
+            <div class="b-row">
                 <p class="pBlocks">Vacina contra a clamidiose felina</p>
                 <p class="numAssociacao">Gato</p> <!--! Serve para identificação, irá ser removido no futuro-->
                 <p class="checkboxVac"><input type="checkbox" name="yes" id="forth">Aplicada</p>
             </div>
             <!--! Cães-->
-            <div class="t-row">
+            <div class="b-row">
                 <p>Vacina múltipla</p>
                 <ul class="pBlocks">
                     <li>Parvovirose</li>
@@ -89,14 +89,14 @@
                 <p class="checkboxVac"><input type="checkbox" name="yes" id="fifth">Aplicada</p>
             </div>
 
-            <div class="t-row">
+            <div class="b-row">
                 <p class="pBlocks">Vacina contra a tosse dos canis</p>
                 <p class="pBlocks">(Traqueobronquite infecciosa canina)</p>
                 <p class="numAssociacao">Cão</p> <!--! Serve para identificação, irá ser removido no futuro-->
                 <p class="checkboxVac"><input type="checkbox" name="yes" id="sixth">Aplicada</p>
             </div>
 
-            <div class="t-row">
+            <div class="b-row">
                 <p class="pBlocks">Vacina contra a doença de Lyme</p>
                 <p class="pBlocks">(Borreliose)</p>
                 <p class="numAssociacao">Cão</p> <!--! Serve para identificação, irá ser removido no futuro-->
