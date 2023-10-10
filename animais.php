@@ -20,7 +20,9 @@ if (isset($_SESSION['loggedin'])) {
 
 <body class="body">
     <?php include "assets/files/navbar.php" ?>
-
+    <div class="centered">
+        <p class="p">Nesta página irão aparecer os animais pelos quais você é responsável</p>
+    </div>
     <div class="centered">
         <div class="blocksAnimais">
             <?php
@@ -42,6 +44,7 @@ if (isset($_SESSION['loggedin'])) {
                     $tamanho = $linhas['Tamanho'];
                     $genero = $linhas['Genero'];
 
+                    echo "<div class='b-row'>";
                     echo "Nome: " .  $nome . "<br>";
                     echo "Raça: " .  $raca . "<br>";
                     echo "Família: " .  $familia . "<br>";
@@ -49,6 +52,9 @@ if (isset($_SESSION['loggedin'])) {
                     echo "Peso: " .  $peso . "<br>";
                     echo "Tamanho: " .  $tamanho . "<br>";
                     echo "Género: " .  $genero . "<br>";
+                    echo "<input style='margin-left: 10px;' type='button' value='Ir para o painel' class='btnEscolherAnimal'>";
+                    echo "</div>";
+                    
                 }
             }
             ?>
