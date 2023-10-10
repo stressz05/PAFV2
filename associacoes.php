@@ -22,7 +22,7 @@
     <div class="centered">
         <div class="block">
             <!--* 1º Associação-->
-            <div class="t-row">
+            <div class="b-row">
                 <p class="tituloAssociacao"><strong>Sociedade Protetora dos Animais</strong></p>
                 <p class="pBlocks"><strong>Telefone:</strong> 213 423 851</p>
                 <p class="pBlocks"><strong>Email:</strong> info@spanimais.org</p>
@@ -38,7 +38,7 @@
             </div>
 
             <!--* 2ª Associação-->
-            <div class="t-row">
+            <div class="b-row">
                 <p class="tituloAssociacao"><strong>União Zoófila</strong></p>
                 <p class="pBlocks"><strong>Telefone:</strong> 760 501 015 (0.60€ + IVA)</p>
                 <p class="pBlocks"><strong>Email:</strong> uniaozoofila@gmail.com</p>
@@ -54,7 +54,7 @@
             </div>
 
             <!--* 3ª Associação-->
-            <div class="t-row">
+            <div class="b-row">
                 <p class="tituloAssociacao"><strong>Animalife</strong></p>
                 <p class="pBlocks"><strong>Telefone:</strong> 707 309 233</p>
                 <p class="pBlocks"><strong>Email:</strong> geral@animalife.pt</p>
