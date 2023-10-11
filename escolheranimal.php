@@ -15,7 +15,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/stylesheet.css">
+        <link rel="stylesheet" href="stylesheet.css">
         <title>BV / Escolher</title>
     </head>
 
@@ -31,7 +31,7 @@
                     <th class="tableHeader">ID</th>
                     <th class="tableHeader">Nome</th>
                     <th class="tableHeader">Raça</th>
-                    <th class="tableHeader">Família</th>
+                    <th class="tableHeader">Espécie</th>
                     <th class="tableHeader">Idade</th>
                     <th class="tableHeader">Peso</th>
                     <th class="tableHeader">Tamanho</th>
@@ -62,12 +62,12 @@
                         if(!empty($nif_vet)){
                             continue;
                         }
-                        
+
                         echo "<tr>";
                         echo "<td class='tableRows' style='text-align: center'>" . $linhas['ID_Animal'] . "</td>";
                         echo "<td class='tableRows' style='text-align: center'>" . $linhas['Nome'] . "</td>";
                         echo "<td class='tableRows' style='text-align: center'>" . $linhas['Raca'] . "</td>";
-                        echo "<td class='tableRows' style='text-align: center'>" . $linhas['Tipo_Animal'] . "</td>";
+                        echo "<td class='tableRows' style='text-align: center'>" . $linhas['Especie'] . "</td>";
                         echo "<td class='tableRows' style='text-align: center'>" . $linhas['Idade'] . " " . $linhas['Idade_Medida'] . "</td>";
                         echo "<td class='tableRows' style='text-align: center'>" . $linhas['Peso'] . "Kg" . "</td>";
                         echo "<td class='tableRows' style='text-align: center'>" . $linhas['Tamanho'] . "</td>";
