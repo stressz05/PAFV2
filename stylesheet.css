@@ -312,7 +312,6 @@ input::-webkit-outer-spin-button {
 .btnEscolherAnimal:hover {
     border-color: #000000;
     transform: scale(1.30);
-    background-color: #fff;
     cursor: pointer;
 }
 
@@ -323,4 +322,16 @@ input::-webkit-outer-spin-button {
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     margin-bottom: 40px;
+}
+
+.btnPainel{
+    color: #000000;
+    text-decoration: none;
+    transform: scale(1.25);
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 10px;
+    align-self: left;
+    width: fit-content;
+    padding: 3px;
 }
