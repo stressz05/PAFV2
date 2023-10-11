@@ -38,7 +38,7 @@ if (isset($_SESSION['loggedin'])) {
                 while ($linhas = $sql_query->fetch_assoc()) {
                     $nome = $linhas['Nome'];
                     $raca = $linhas['Raca'];
-                    $familia = $linhas['Tipo_Animal'];
+                    $familia = $linhas['Especie'];
                     $idade = $linhas['Idade'] . " " . $linhas['Idade_Medida'];
                     $peso = $linhas['Peso'] . "Kg";
                     $tamanho = $linhas['Tamanho'];
@@ -52,9 +52,9 @@ if (isset($_SESSION['loggedin'])) {
                     echo "Peso: " .  $peso . "<br>";
                     echo "Tamanho: " .  $tamanho . "<br>";
                     echo "Género: " .  $genero . "<br>";
-                    echo "<input style='margin-left: 10px;' type='button' value='Ir para o painel' class='btnEscolherAnimal'>";
+                    echo "<br>";
+                    echo "<a href='painelvac.php?id_animal=" . $linhas['ID_Animal'] . " 'class='btnPainel'>Ir para o Painel</a>";
                     echo "</div>";
-                    
                 }
             }
             ?>
