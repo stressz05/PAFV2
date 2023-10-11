@@ -71,7 +71,7 @@
 
             <!--* 4ª Associação-->
             <div class="b-row">
-                <p class="tituloAssociacao"><strong>Sociedade Protetora dos Animais Porto</strong></p>
+                <p class="tituloAssociacao"><strong>Sociedade Protetora Animais Porto</strong></p>
                 <p class="pBlocks"><strong>Telefone 1:</strong> 225898090</p>
                 <p class="pBlocks"><strong>Telefone 2:</strong> 924454710</p>
                 <p class="pBlocks">
