@@ -94,7 +94,7 @@ The goal of this project is to create a website called "Vaccine Bulletin", which
 - PHP
 - XAMPP (for the database and web server)
 
-### ID
+### IDE
 
 The project was developed using Visual Studio Code as the IDE.
 
