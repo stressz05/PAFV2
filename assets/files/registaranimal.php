@@ -23,19 +23,19 @@
 
         if($ageType == 'months'){
             if($animal == 'cao'){
-                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal, NIF_Dono) 
-                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Meses', 'Cão', '$nif')";
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Idade_Medida, Peso, Tamanho, Genero, Especie, NIF_Dono) 
+                VALUES ('$nome', '$raca', '$idade', 'Meses','$peso', '$tamanho', '$genero', 'Cão', '$nif')";
             } else {
-                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal, NIF_Dono) 
-                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Meses', 'Gato', '$nif')";
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Idade_Medida, Peso, Tamanho, Genero, Especie, NIF_Dono) 
+                VALUES ('$nome', '$raca', '$idade', 'Meses', '$peso', '$tamanho', '$genero', 'Gato', '$nif')";
             }
         } else if($ageType == 'years') {
             if($animal == 'cao'){
-                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal, NIF_Dono) 
-                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos', 'Cão', '$nif')";
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Idade_Medida, Peso, Tamanho, Genero, Especie, NIF_Dono) 
+                VALUES ('$nome', '$raca', '$idade', 'Anos', '$peso', '$tamanho', '$genero', 'Cão', '$nif')";
             } else {
-                $sql = "INSERT INTO animal (Nome, Raca, Idade, Peso, Tamanho, Genero, Idade_Medida, Tipo_Animal, NIF_Dono) 
-                VALUES ('$nome', '$raca', '$idade', '$peso', '$tamanho', '$genero', 'Anos', 'Gato', '$nif')";
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Idade_Medida, Peso, Tamanho, Genero, Especie, NIF_Dono) 
+                VALUES ('$nome', '$raca', '$idade', 'Anos', '$peso', '$tamanho', '$genero', 'Gato', '$nif')";
             }
         } else {
             echo "Ups! Alguma coisa correu mal... :/";
