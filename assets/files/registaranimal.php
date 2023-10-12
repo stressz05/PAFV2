@@ -9,8 +9,8 @@
             session_start();
         }
 
-        //. Uso a função "MAX" para selecionar o valor máximo da coluna, e de seguida adiciono um para o valor ID_Vacina ser automático e único
-        $result = $conn->query("SELECT MAX(ID_Vacina) AS total FROM animal");
+        //. Uso a função "MAX" para selecionar o valor máximo da coluna, e de seguida adiciono um para o valor ID_Consulta ser automático e único
+        $result = $conn->query("SELECT MAX(ID_Consulta) AS total FROM animal");
         $row = $result->fetch_assoc();
         $idVac = $row['total'] + 1;
 
@@ -28,18 +28,18 @@
 
         if($ageType == 'months'){
             if($animal == 'cao'){
-                $sql = "INSERT INTO animal (Nome, Raca, Idade, Idade_Medida, Peso, Tamanho, Genero, Especie, NIF_Dono, ID_Vacina) 
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Idade_Medida, Peso, Tamanho, Genero, Especie, NIF_Dono, ID_Consulta) 
                 VALUES ('$nome', '$raca', '$idade', 'Meses','$peso', '$tamanho', '$genero', 'Cão', '$nif', '$idVac')";
             } else {
-                $sql = "INSERT INTO animal (Nome, Raca, Idade, Idade_Medida, Peso, Tamanho, Genero, Especie, NIF_Dono, ID_Vacina) 
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Idade_Medida, Peso, Tamanho, Genero, Especie, NIF_Dono, ID_Consulta) 
                 VALUES ('$nome', '$raca', '$idade', 'Meses', '$peso', '$tamanho', '$genero', 'Gato', '$nif', '$idVac')";
             }
         } else if($ageType == 'years') {
             if($animal == 'cao'){
-                $sql = "INSERT INTO animal (Nome, Raca, Idade, Idade_Medida, Peso, Tamanho, Genero, Especie, NIF_Dono, ID_Vacina) 
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Idade_Medida, Peso, Tamanho, Genero, Especie, NIF_Dono, ID_Consulta) 
                 VALUES ('$nome', '$raca', '$idade', 'Anos', '$peso', '$tamanho', '$genero', 'Cão', '$nif', '$idVac')";
             } else {
-                $sql = "INSERT INTO animal (Nome, Raca, Idade, Idade_Medida, Peso, Tamanho, Genero, Especie, NIF_Dono, ID_Vacina) 
+                $sql = "INSERT INTO animal (Nome, Raca, Idade, Idade_Medida, Peso, Tamanho, Genero, Especie, NIF_Dono, ID_Consulta) 
                 VALUES ('$nome', '$raca', '$idade', 'Anos', '$peso', '$tamanho', '$genero', 'Gato', '$nif', '$idVac')";
             }
         } else {
