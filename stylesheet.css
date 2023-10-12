@@ -342,3 +342,8 @@ input::-webkit-outer-spin-button {
     flex-direction: column;
     text-align: center;
 }
+
+.remove {
+    color: red;
+    float: right;
+}
