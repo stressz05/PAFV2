@@ -33,7 +33,7 @@ if (isset($_SESSION['loggedin'])) {
             $sql_query = $conn->query($sql);
 
             if ($sql_query == true) {
-                //. Este while verifica se há linhas para ler do resultado da consula
+                //. Este while verifica se há linhas para ler do resultado da consulta
                 //. O loop vai continuar até não haver linhas para ler.
                 while ($linhas = $sql_query->fetch_assoc()) {
                     $nome = $linhas['Nome'];
@@ -54,6 +54,7 @@ if (isset($_SESSION['loggedin'])) {
                     echo "Género: " .  $genero . "<br>";
                     echo "<br>";
                     echo "<a href='painelvac.php?id_animal=" . $linhas['ID_Animal'] . " 'class='btnPainel'>Ir para o Painel</a>";
+                    echo "<a href='assets/files/removerAnimal.php?id_animal=" . $linhas['ID_Animal'] . "' style='color: red; float: right;'>Remover Animal</a>";
                     echo "</div>";
                 }
             }
