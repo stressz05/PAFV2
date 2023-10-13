@@ -42,24 +42,24 @@ if (isset($_SESSION['loggedin'])) {
     <div class="centered" style="margin-top: 0">
         <div class="containerPainel">
             <div class="left">
-                <p class="pBlocks">Nome: <?php echo $nome; ?></p>
+                <p class="pBlocks"><strong>Nome: </strong><?php echo $nome; ?></p>
                 <div class="pBlocks">
-                    <label>Nome da Vacina: <br><input type="text" class="input"></label>
+                    <label><strong>Nome da Vacina: </strong><br><input type="text" class="input"></label>
                 </div>
                 <div class="pBlocks">
-                    <label>Data de administração: <br><input type="date" class="input"></label>
+                    <label><strong>Data de administração: </strong><br><input type="date" class="input"></label>
                 </div>
                 <div class="pBlocks">
-                    <label>Descrição da vacina: <span style="font-size: 15px">(opcional)</span><br><textarea class="textArea"></textarea></label>
+                    <label><strong>Descrição da vacina: </strong><span style="font-size: 15px; color: green">(opcional)</span><br><textarea class="textArea"></textarea></label>
                 </div>
             </div>
             
             <div class="right">
                 <div class="pBlocks">
-                    <label>Peso: <br> <input type="text" class="input" placeholder=" Peso anterior: <?php echo $peso; ?>Kg"></label>
+                    <label><strong>Peso: </strong><br><input type="text" class="input" placeholder=" Peso anterior: <?php echo $peso; ?>Kg"></label>
                 </div>
                 <div class="pBlocks">
-                    <label>Observações:<br><textarea class="textArea" style="height: 240px"></textarea></label>
+                    <label><strong>Observações: </strong><br><textarea class="textArea" style="height: 240px"></textarea></label>
                 </div>
             </div>
         </div>
