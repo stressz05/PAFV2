@@ -53,7 +53,7 @@ if (isset($_SESSION['loggedin'])) {
                     echo "Tamanho: " .  $tamanho . "<br>";
                     echo "Género: " .  $genero . "<br>";
                     echo "<br>";
-                    echo "<a href='painelvac.php?id_animal=" . $linhas['ID_Animal'] . " 'class='btnPainel'>Ir para o Painel</a>";
+                    echo "<a href='painelCon.php?id_animal=" . $linhas['ID_Animal'] . " 'class='btnPainel'>Ir para o Painel</a>";
                     echo "<a href='assets/files/removerAnimal.php?id_animal=" . $linhas['ID_Animal'] . "' class='remove'>Remover Animal</a>";
                     echo "</div>";
                 }
