@@ -27,17 +27,36 @@
         <p>Informações básicas do animal: </p>
     </div>
     <div class="info">
-        <img id="edit" class="edit" src="assets/imagens/editSquare.png" title="Editar" onclick="editar()">
-        <p id="name">Nome: </p>
-        <p id="age">Idade: <input class="editarInput" type="number" name="ageInput" id="ageInput" hidden>
-            <label id="labelMonth" hidden>|<input type="checkbox" name="typeAge" value="month" id="month">Meses</label>
-            <label id="labelYear" hidden><input type="checkbox" name="typeAge" value="year" id="year">Anos</label>
-        </p>
-        <p id="size">Tamanho: </p>
-        <p id="weight">Peso:
-            <input class="editarInput" type="text" name="weightInput" id="weightInput" hidden>
-            <a class="confirm" id="confirmar" style="float: right;" hidden href="">Confirmar</a>
-        </p>
+        <?php 
+            require "assets/files/conexao.php";
+            $nif = $_SESSION['nif_dono'];
+            
+            $sql = "SELECT Nome, Idade, Idade_Medida, Tamanho, Peso, ID_Animal, ID_Consulta FROM animal WHERE NIF_Dono = '$nif'";
+            $query_sql = $conn->query($sql);
+
+            if($query_sql == true){
+                $linhas = $query_sql->fetch_assoc();
+                
+                $nome = $linhas['Nome'];
+                $idade = $linhas['Idade'];
+                $idadeTipo = $linhas['Idade_Medida'];
+                $tamanho = $linhas['Tamanho'];
+                $peso = $linhas['Peso'];
+            }
+
+            echo "<img id='edit' class='edit' src='assets/imagens/editSquare.png' title='Editar' onclick='editar()'>";
+            echo "<img id='cancel' class='edit' src='assets/imagens/cancel.png 'title='Cancelar' onclick='cancelar()' hidden>";
+            echo "<p id='name'><strong>Nome:</strong> " . $nome . "</p>";
+            echo "<p id='age'><strong>Idade:</strong> " . "<span id='ageV'>" . $idade . " " . $idadeTipo . "</span>". "<input class='editarInput' type='text' pattern='[0-9]+' name='ageInput' id='ageInput' hidden>";
+            echo "<label id='labelMonth' hidden>|<input type='checkbox' name='typeAge' value='month' id='month'>Meses</label>";
+            echo "<label id='labelYear' hidden><input type='checkbox' name='typeAge' value='year' id='year'>Anos</label>";
+            echo "</p>";
+            echo "<p id='size'><strong>Tamanho:</strong> " . $tamanho .  "</p>";
+            echo "<p id='weight'><strong>Peso:</strong> " . "<span id='weightV'>" . $peso . "Kg" . "</span>". "<input class='editarInput' type='text' name='weightInput' id='weightInput' hidden>";
+            echo "<a class='confirm' id='confirmar' style='float: right;' hidden href=''>Confirmar</a>";
+            echo "</p>";
+        ?>
+
 
     </div>
 
@@ -45,85 +64,60 @@
         <p>Vacinas do Animal:</p>
     </div>
 
-    <div class="centered">
-        <div class="block">
-            <!--! Gatos-->
-            <div class="b-row">
-                <p class="pBlocks">Vacina contra a raiva</p>
-                <p class="numAssociacao">Gato e Cão</p> <!--! Serve para identificação, irá ser removido no futuro-->
-                <p class="checkboxVac"><input type="checkbox" name="yes" id="first">Aplicada</p>
-            </div>
 
-            <div class="b-row">
-                <p class="pBlocks">Vacina tríplice</p>
-                <ul class="pBlocks">
-                    <li>Panleucopenia</li>
-                    <li>Calicivirose</li>
-                    <li>Rinotraqueíte</li>
-                </ul>
-                <p class="numAssociacao">Gato</p> <!--! Serve para identificação, irá ser removido no futuro-->
-                <p class="checkboxVac"><input type="checkbox" name="yes" id="second">Aplicada</p>
-            </div>
-
-            <div class="b-row">
-                <p class="pBlocks">Vacina contra a leucemia felina</p>
-                <p class="numAssociacao">Gato</p> <!--! Serve para identificação, irá ser removido no futuro-->
-                <p class="checkboxVac"><input type="checkbox" name="yes" id="third">Aplicada</p>
-            </div>
-
-            <div class="b-row">
-                <p class="pBlocks">Vacina contra a clamidiose felina</p>
-                <p class="numAssociacao">Gato</p> <!--! Serve para identificação, irá ser removido no futuro-->
-                <p class="checkboxVac"><input type="checkbox" name="yes" id="forth">Aplicada</p>
-            </div>
-            <!--! Cães-->
-            <div class="b-row">
-                <p>Vacina múltipla</p>
-                <ul class="pBlocks">
-                    <li>Parvovirose</li>
-                    <li>Cinomose</li>
-                    <li>Hepatite infecciosa canina</li>
-                    <li>Leptospirose</li>
-                </ul>
-                <p class="numAssociacao">Cão</p> <!--! Serve para identificação, irá ser removido no futuro-->
-                <p class="checkboxVac"><input type="checkbox" name="yes" id="fifth">Aplicada</p>
-            </div>
-
-            <div class="b-row">
-                <p class="pBlocks">Vacina contra a tosse dos canis</p>
-                <p class="pBlocks">(Traqueobronquite infecciosa canina)</p>
-                <p class="numAssociacao">Cão</p> <!--! Serve para identificação, irá ser removido no futuro-->
-                <p class="checkboxVac"><input type="checkbox" name="yes" id="sixth">Aplicada</p>
-            </div>
-
-            <div class="b-row">
-                <p class="pBlocks">Vacina contra a doença de Lyme</p>
-                <p class="pBlocks">(Borreliose)</p>
-                <p class="numAssociacao">Cão</p> <!--! Serve para identificação, irá ser removido no futuro-->
-                <p class="checkboxVac"><input type="checkbox" name="yes" id="seventh">Aplicada</p>
-            </div>
-        </div>
-    </div>
 </body>
 
 <?php include "assets/files/footer.php";?>
 
 <script>
+    //. Função para se puder editar.
     function editar() {
-        var age = document.getElementById('ageInput');
-        var weight = document.getElementById('weightInput');
-        var confirmar = document.getElementById('confirmar');
+        let age = document.getElementById('ageInput');
+        let weight = document.getElementById('weightInput');
+        let confirmar = document.getElementById('confirmar');
         var image = document.getElementById('edit');
-        var month = document.getElementById('labelMonth');
-        var year = document.getElementById('labelYear');
+        let month = document.getElementById('labelMonth');
+        let year = document.getElementById('labelYear');
+        let ageV = document.getElementById('ageV');
+        let weightV = document.getElementById('weightV');
+        let cancel = document.getElementById('cancel');
 
-        image.style.border = "2px solid black";
-        image.style.padding = "2px"
+        image.hidden = true;
+        cancel.hidden = false;
+        month.style.fontSize = "20px";
+        year.style.fontSize = "20px";
         age.hidden = false;
         weight.hidden = false;
         confirmar.hidden = false;
         month.hidden = false;
         year.hidden = false;
+        ageV.hidden = true;
+        weightV.hidden = true;
+    }
+
+    //. Função para cancelar a Edição
+    function cancelar(){
+        let age = document.getElementById('ageInput');
+        let weight = document.getElementById('weightInput');
+        let confirmar = document.getElementById('confirmar');
+        var image = document.getElementById('edit');
+        let month = document.getElementById('labelMonth');
+        let year = document.getElementById('labelYear');
+        let ageV = document.getElementById('ageV');
+        let weightV = document.getElementById('weightV');
+        let cancel = document.getElementById('cancel');
+
+        image.hidden = false;
+        cancel.hidden = true;
+        month.style.fontSize = "20px";
+        year.style.fontSize = "20px";
+        age.hidden = true;
+        weight.hidden = true;
+        confirmar.hidden = true;
+        month.hidden = true;
+        year.hidden = true;
+        ageV.hidden = false;
+        weightV.hidden = false;
     }
 </script>
 
