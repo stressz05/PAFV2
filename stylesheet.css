@@ -116,21 +116,22 @@
 
 .table {
     border: 1px solid black;
-    border-collapse: collapse;
+    border-radius: 15px;
     border-spacing: 0px;
+    overflow: hidden;
     width: 1500px;
     box-shadow: 0 0 8px black;
 }
 
 .tableHeader {
-    border: 1px solid black;
+    border: 1px solid gray;
     padding: 8px;
     background-color: whitesmoke;
     font-size: 20px;
 }
 
 .tableRows {
-    border: 1px solid black;
+    border: 1px solid gray;
     padding: 8px;
     background-color: whitesmoke;
     font-size: 18px;
