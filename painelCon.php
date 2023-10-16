@@ -50,14 +50,14 @@ if (isset($_SESSION['loggedin'])) {
                         <label>
                             <strong>Nome da Vacina: </strong>
                             <br>
-                            <input class="input" name="nomeVac" type="text">
+                            <input class="input" name="nomeVac" type="text" required>
                         </label>
                     </div>      
                     <div class="pBlocks">
                         <label>
                             <strong>Data de administração: </strong>
                             <br>
-                            <input class="input" name="dataVac" type="date">
+                            <input class="input" name="dataVac" type="date" required>
                         </label>
                     </div>
                     <div class="pBlocks">
@@ -75,14 +75,14 @@ if (isset($_SESSION['loggedin'])) {
                         <label>
                             <strong>Peso: </strong>
                             <br>
-                            <input class="input" type="text" name="peso" placeholder=" Peso anterior: <?php echo $peso; ?>Kg">
+                            <input class="input" type="text" name="peso" placeholder=" Peso anterior: <?php echo $peso; ?>Kg" required>
                         </label>
                     </div>
                     <div class="pBlocks">
                         <label>
                             <strong>Observações: </strong>
                             <br>
-                            <textarea class="textArea" name="obs" style="height: 240px"></textarea>
+                            <textarea class="textArea" name="obs" style="height: 240px" required></textarea>
                         </label>
                     </div>
                 </div>
