@@ -1,5 +1,5 @@
 <head>
-    <title>BV | Login</title>
+    <title>BV / Login</title>
 </head>
 
 <?php
