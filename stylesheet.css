@@ -20,6 +20,7 @@
     width: 400px;
     height: 130px;
     pointer-events: none;
+    padding: 5px;
 }
 
 .navBar {
