@@ -3,7 +3,7 @@
 .body {
     font-family: 'Work Sans';
     background-color: #f8eba390;
-    /*. o 95 é a opacidade*/
+    /*. o 90 é a opacidade*/
     font-size: x-large;
     color: black;
     font-weight: bold;
@@ -17,7 +17,7 @@
 
 .logo {
     vertical-align: top;
-    width: 350px;
+    width: 400px;
     height: 130px;
     pointer-events: none;
 }
@@ -25,8 +25,7 @@
 .navBar {
     background-color: rgb(39, 39, 39);
     width: 100%;
-    display: flex;
-    justify-content: center;
+    text-align: center;
     padding-bottom: 10px;
     padding-top: 5px;
     position: fixed;
