@@ -43,18 +43,18 @@
                 $tamanho = $linhas['Tamanho'];
                 $peso = $linhas['Peso'];
             }
-
+            
+            echo "<form action='assets/files/editar.php' method='post'>";
             echo "<img id='edit' class='edit' src='assets/imagens/editSquare.png' title='Editar' onclick='editar()'>";
             echo "<img id='cancel' class='edit' src='assets/imagens/cancel.png 'title='Cancelar' onclick='cancelar()' hidden>";
             echo "<p id='name'><strong>Nome:</strong> " . $nome . "</p>";
-            echo "<p id='age'><strong>Idade:</strong> " . "<span id='ageV'>" . $idade . " " . $idadeTipo . "</span>". "<input class='editarInput' type='text' pattern='[0-9]+' name='ageInput' id='ageInput' hidden>";
+            echo "<p id='age'><strong>Idade:</strong> " . "<span id='ageV'>" . $idade . " " . $idadeTipo . "</span>". "<input class='editarInput' type='number' name='ageInput' id='ageInput' hidden>";
             echo "<label id='labelMonth' hidden>|<input type='checkbox' name='typeAge' value='month' id='month'>Meses</label>";
-            echo "<label id='labelYear' hidden><input type='checkbox' name='typeAge' value='year' id='year'>Anos</label>";
-            echo "</p>";
+            echo "<label id='labelYear' hidden><input type='checkbox' name='typeAge' value='year' id='year'>Anos</label></p>";
             echo "<p id='size'><strong>Tamanho:</strong> " . $tamanho .  "</p>";
             echo "<p id='weight'><strong>Peso:</strong> " . "<span id='weightV'>" . $peso . "Kg" . "</span>". "<input class='editarInput' type='text' name='weightInput' id='weightInput' hidden>";
-            echo "<a class='confirm' id='confirmar' style='float: right;' hidden href=''>Confirmar</a>";
-            echo "</p>";
+            echo "<input type='submit' class='btnEscolherAnimal' value='Confirmar' id='confirmar' style='float: right;' hidden></input></p>";
+            echo "</form>";
         ?>
 
 
