@@ -50,17 +50,15 @@
     align-self: center;
     margin-top: 20px;
     transform: scale(1.5);
-    border-color: #f8eba3;
-    background-color: #f8eba3;  
+    border-color: #ffffff;
+    background-color: #ffffff;  
 } 
 
 .button:hover{
     border-color: #000000;
     transform: scale(1.55);
-    background-color: #fff;
     cursor: pointer;
 }
-
 
 .centered {
     display: flex;
@@ -95,11 +93,6 @@
     height: 40px;
     box-shadow: 0 0 1px black;
     font-size: 16px;
-}
-
-.input::-webkit-inner-spin-button,
-input::-webkit-outer-spin-button {
-    -webkit-appearance: none;
 }
 
 .label {

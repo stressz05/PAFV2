@@ -28,7 +28,7 @@
     <div class="centered" style="margin-top: 0">
         <form action="assets/files/escolhaAnimal.php" method="post" class="formEscolher">
             <p class="label">Escolha o ID de um animal: </p>
-            <input type="number" class="input" name="ID_animal" id="idanimal" placeholder="ex. 1" required>
+            <input type="text" class="input" name="ID_animal" id="idanimal" placeholder="ex. 1" required>
             <input type="submit" value="Escolher" class="btnEscolherAnimal">
         </form>
     </div>
