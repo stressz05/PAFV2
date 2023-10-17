@@ -6,18 +6,27 @@ O objetivo deste projeto é criar um website chamado "Boletim de Vacinas", o sit
 
 ### Conteúdo do Repositório
 
+- `acessonegado.php`: Página que irá aparecer ao utilizador ao tentar aceder a uma página de veterinário caso o mesmo seja um dono.
+- `animais.php`: Página de veterinário que mostra os animais pelos quais é responsável.
+- `associacoes.php`: Página onde o utilizador encontra informações sobre algumas associações para animais.
+- `consulta.php`: Código PHP que envia os dados da página `painelCon.php` para a base de dados.
+- `editar.php`: Código PHP para atualizar informações necessárias do animal.
+- `escolhaAnimal.php`: Código PHP que envia os dados da página `escolheranimal.php` para a Base de Dados.
+- `escolheranimal.php`: Página de veterinário onde escolhe os animais dos quais quer ser responsável.
+- `footer.php`: Guarda o footer do site para facilitar a manutenção do mesmo.
+- `informacoesanimal.php`: Página principal do site, aqui o utilizador vê as informações do animal, do peso às vacinas.
 - `index.html`: Página inicial do projeto.
-- `registarform.php`: Formulário de registo do dono e veterinário.
-- `registaranimalform.php`: Formulário de registo do animal.
+- `login.php`: Código que efetua o login do utilizador.
+- `logout.php`: Código PHP que efetua o logout do utilizador e redireciona para o Login caso o utilizador queira.
+- `navbar.php`: Guarda a barra de navegação do site para facilitar a manutenção da mesma.
+- `painelCon.php`: Página de veterinário onde o mesmo coloca os dados da consulta.
 - `registar.php`: Código PHP que envia os dados do registo do dono e do veterinário para a Base de Dados.
 - `registaranimal.php`: Código que envia os dados do registo do animal para a Base de Dados.
-- `login.php`: Código que efetua o login do utilizador.
-- `associacoes.php`: Página onde o utilizador encontra informações sobre algumas associações para animais.
-- `informacoesanimal.php`: Página principal do site, aqui o utilizador vê as informações do animal, do peso às vacinas.
-- `logout.php`: Código PHP que efetua o logout do utilizador e redireciona para o Login caso o utilizador queira.
-- `editar.php`: Código PHP para atualizar informações necessárias do animal.
+- `registaranimalform.php`: Formulário de registo do animal.
+- `registarform.php`: Formulário de registo do dono e veterinário.
+- `removerAnimal.php`: Código PHP que retira o NIF do veterinário da tabela do animal.
 - `stylesheet.css`: Ficheiro CSS para estilizar o projeto.
-
+  
 ### Como Utilizar
 
 1. Faça o **download** dos ficheiros deste repositório.
@@ -66,16 +75,25 @@ The goal of this project is to create a website called "Vaccine Bulletin", which
 
 ### Repository Contents
 
-- `index.html`: Project's home page.
-- `registarform.php`: Owner and veterinarian registration form.
-- `registaranimalform.php`: Animal registration form.
-- `registar.php`: PHP code that sends owner and veterinarian registration data to the Database.
-- `registaranimal.php`: Code that sends animal registration data to the Database.
-- `login.php`: Code that performs user login.
-- `associacoes.php`: Page where users can find information about some animal associations.
-- `informacoesanimal.php`: Main page of the site, where users can see animal information, from weight to vaccines.
-- `logout.php`: PHP code that performs user logout and redirects to the Login page if desired.
+- `acessonegado.php`: Page that will appear to the user when trying to access a veterinarian page if they are a pet owner.
+- `animais.php`: Veterinarian page that displays the animals they are responsible for.
+- `associacoes.php`: Page where the user can find information about some animal associations.
+- `consulta.php`: PHP code that sends data from the `painelCon.php` page to the database.
 - `editar.php`: PHP code to update necessary animal information.
+- `escolhaAnimal.php`: PHP code that sends data from the `escolheranimal.php` page to the database.
+- `escolheranimal.php`: Veterinarian page where they choose the animals they want to be responsible for.
+- `footer.php`: Stores the footer of the site for easier maintenance.
+- `informacoesanimal.php`: Main page of the site, where the user can view animal information, from weight to vaccines.
+- `index.html`: Project's homepage.
+- `login.php`: PHP code for user login.
+- `logout.php`: PHP code for user logout and redirection to the login page if desired.
+- `navbar.php`: Stores the site's navigation bar for easier maintenance.
+- `painelCon.php`: Veterinarian page where they enter appointment data.
+- `registar.php`: PHP code that sends data from the owner and veterinarian registration to the database.
+- `registaranimal.php`: Code that sends data from the animal registration to the database.
+- `registaranimalform.php`: Animal registration form.
+- `registarform.php`: Owner and veterinarian registration form.
+- `removerAnimal.php`: PHP code that removes the veterinarian's NIF from the animal table.
 - `stylesheet.css`: CSS file to style the project.
 
 ### How to Use
