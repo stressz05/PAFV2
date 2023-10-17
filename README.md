@@ -1,5 +1,5 @@
-## _Português_
-# Projeto de Aptidão Final _(PAF)_
+# _Português_
+## Projeto de Aptidão Final _(PAF)_
 
 Este repositório contém os ficheiros do meu Projeto de Aptidão Final (PAF). 
 O objetivo deste projeto é criar um website chamado "Boletim de Vacinas", o site servirá para o utilzador poder acessar aos dados do seu animal em qualquer lugar, de forma fácil e rápida.
@@ -67,8 +67,8 @@ Para qualquer dúvida ou informação adicional, por favor, contacte-me através
 
 ---
 
-## English
-# Final Project _(PAF)_
+# English
+## Final Project _(PAF)_
 
 This repository contains the files for my Final Project (PAF).
 The goal of this project is to create a website called "Vaccine Bulletin", which will allow users to access their animal's data anywhere, easily and quickly.
