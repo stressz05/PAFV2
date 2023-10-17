@@ -152,13 +152,13 @@
 
 .info {
     text-align: left;
-    margin-left: 210px;
+    margin-left: 240px;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     border-bottom-left-radius: 15px;
     font-weight: 400;
     padding-left: 5px;
-    width: 1492px;
+    width: 1435px;
 }
 
 .block{
