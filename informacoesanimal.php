@@ -1,5 +1,9 @@
 <?php
     require "assets/files/verificacao.php";
+
+    if($_SESSION['tipoUser'] == 'vet'){
+        header("Location: /escolheranimal.php");
+    }
 ?>
 
 <!DOCTYPE html>
