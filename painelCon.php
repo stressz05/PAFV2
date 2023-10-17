@@ -65,7 +65,7 @@ if (isset($_SESSION['loggedin'])) {
                             <strong>Descrição da vacina: </strong>
                             <span style="font-size: 15px; color: green">(opcional)</span>
                             <br>
-                            <textarea class="textArea" name="descVac"></textarea>
+                            <textarea class="textArea" name="descVac" spellcheck="true"></textarea>
                         </label>
                     </div>
                 </div>    
@@ -82,7 +82,7 @@ if (isset($_SESSION['loggedin'])) {
                         <label>
                             <strong>Observações: </strong>
                             <br>
-                            <textarea class="textArea" name="obs" style="height: 240px" required></textarea>
+                            <textarea class="textArea" name="obs" style="height: 240px" spellcheck="true" required></textarea>
                         </label>
                     </div>
                 </div>
