@@ -19,12 +19,20 @@
                 echo "UPS! Alguma coisa correu mal..." . "<br>" . $conn->error;
             }
         } else {
-            $sql = "UPDATE animal SET Idade = '$age', Idade_Medida = 'Anos', Peso = '$peso' WHERE NIF_Dono = '$nif'";
-            if($conn->query($sql) == true){
-                header("Location: /informacoesanimal.php");
-            } else {
-                echo "UPS! Alguma coisa correu mal..." . "<br>" . $conn->error;
+            if($age > 1){
+                $sql = "UPDATE animal SET Idade = '$age', Idade_Medida = 'Anos', Peso = '$peso' WHERE NIF_Dono = '$nif'";
+                if($conn->query($sql) == true){
+                    header("Location: /informacoesanimal.php");
+                } else {
+                    echo "UPS! Alguma coisa correu mal..." . "<br>" . $conn->error;
+                }
+            } else if($age == 1){
+                $sql = "UPDATE animal SET Idade = '$age', Idade_Medida = 'Ano', Peso = '$peso' WHERE NIF_Dono = '$nif'";
+                if($conn->query($sql) == true){
+                    header("Location: /informacoesanimal.php");
+                } else {
+                    echo "UPS! Alguma coisa correu mal..." . "<br>" . $conn->error;
+                }
             }
         }
     }
-?>
