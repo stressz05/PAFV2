@@ -26,14 +26,14 @@
     </div>
 
     <div class="centered" style="margin-top: 0">
-        <form action="assets/files/escolhaAnimal.php" method="post" class="formEscolher">
-            <p class="label">Escolha o ID de um animal: </p>
-            <input type="text" class="input" name="ID_animal" id="idanimal" placeholder="ex. 1" required>
-            <input type="submit" value="Escolher" class="btnEscolherAnimal">
-        </form>
+        <div>
+        <p class="label" style="text-align: left;">Procure o nome de um animal: </p>
+        <input type="text" class="input" style="margin-top: 0" name="animal" id="nome_animal" placeholder="ex. Boby" oninput="searchAnimal()" required>
+        </div>
     </div>
 
-    <div class="centered">
+    <div class="centered" style="margin-top: 30px;">
+        <div class="table-container">
         <table class="table">
             <tr>
                 <th class="tableHeader">ID</th>
@@ -71,8 +71,9 @@
                         continue;
                     }
 
-                    echo "<tr>";
-                    echo "<td class='tableRows' style='text-align: center'>" . $linhas['ID_Animal'] . "</td>";
+                    echo "<tr id='click'>";
+                    echo "<td class='tableRows' style='text-align: center'>";
+                    echo "<a class='aTable' href='assets/files/escolhaAnimal.php?id_animal=" . $linhas['ID_Animal'] . "'>" . $linhas['ID_Animal'] . "</a></td>";
                     echo "<td class='tableRows' style='text-align: center'>" . $linhas['Nome'] . "</td>";
                     echo "<td class='tableRows' style='text-align: center'>" . $linhas['Raca'] . "</td>";
                     echo "<td class='tableRows' style='text-align: center'>" . $linhas['Especie'] . "</td>";
@@ -86,7 +87,37 @@
             }
             ?>
         </table>
+        </div>
     </div>
+    <script>
+        function searchAnimal() {
+        var input = document.getElementById("nome_animal");
+        var table = document.querySelector(".table");
+        var rows = table.getElementsByTagName("tr");
+        
+        //. Percorre as linhas da tabela começando no índice 1 (linha 2)
+        for (var i = 1; i < rows.length; i++) {
+            var idCell = rows[i].getElementsByTagName("td")[1]; //. Obtém a célula com o ID do animal em cada iteração.
+            var idText = idCell.textContent || idCell.innerText; //. Guarda o texto da célula, no caso, o ID do animal.
+
+            //. Função indexOf = devolve o índice de um determinado valor em uma string, caso não encontre devolve -1.
+            if (idText.indexOf(input.value) > -1) { //. Verifica se o valor guardado no input existe no array idText.
+                rows[i].style.display = "";
+            } else {
+                rows[i].style.display = "none";
+            }
+        }
+    }
+
+        const clique = document.getElementById('click');
+
+        clique.addEventListener('click', event => {
+            if(event.target.tagName === 'TD'){
+                const idAnimal = clique.querySelector('.aTable').getAttribute('href').split('=')[1];
+                window.location.href = `assets/files/escolhaAnimal.php?id_animal=${idAnimal}`;
+            }
+        });
+    </script>
 
     <?php include "assets/files/footer.php" ?>
 </body>
