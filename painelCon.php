@@ -41,8 +41,11 @@ if (isset($_SESSION['loggedin'])) {
         $_SESSION['idConsulta'] = $idCon;
     }
     ?>
+    <div class="centeredCon">
+    <a class='prevCon' href='animais.php'>Cancelar</a>
+    </div>
     <form action="assets/files/consulta.php" method="post">
-        <div class="centered" style="margin-top: 0">
+        <div class="centeredCon">
             <div class="containerPainel">
                 <div class="left">
                     <p class="pBlocks"><strong>Nome: </strong><?php echo $nome; ?></p>
@@ -88,10 +91,16 @@ if (isset($_SESSION['loggedin'])) {
                 </div>
             </div>
         </div>
-        <div class="centered" style="margin-top: 10px">
+        <div class="centeredCon">
             <button class="btnEscolherAnimal" type="submit">Confirmar</button>
         </div>
     </form>
+
+    <?php 
+        echo "<div class='centeredCon'>";
+        echo "<a class='prevCon' href='consultasAnteriores.php?id=$id'>Consultas Anteriores</a>";
+        echo "</div>"
+    ?>
 
     <?php include "assets/files/footer.php" ?>
 </body>
