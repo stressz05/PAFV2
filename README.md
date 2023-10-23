@@ -10,14 +10,14 @@ O objetivo deste projeto é criar um website chamado "Boletim de Vacinas", o sit
 - `acessonegado.php`: Página que irá aparecer ao utilizador ao tentar aceder a uma página de veterinário caso o mesmo seja um dono.
 - `animais.php`: Página de veterinário que mostra os animais pelos quais é responsável.
 - `apagar.php`: Página onde aparecem os donos e os seus animais para serem apagados, caso seja necessário.
-- `apagarDono.php` e `deleteVet.php`: Código que é executado após a escolha do administrador em apagar.php ou apagarVet.php.
+- `apagarDono.php` e `deleteVet.php`: Código que é executado após a escolha do administrador em `apagar.php` ou `apagarVet.php`.
 - `apagarVet.php`: Página onde aparecem veterinários com acesso aprovado, para serem apagados, caso seja necessário.
 - `aprovar.php`: Página de administrador para ver que veterinários estão em lista de espera.
 - `associacoes.php`: Página onde o utilizador encontra informações sobre algumas associações para animais.
 - `consulta.php`: Código PHP que envia os dados da página `painelCon.php` para a base de dados.
 - `consultasAnteriores.php`: Página que mostra as últimas consultas que o animal fez.
 - `editar.php`: Código PHP para atualizar informações necessárias do animal.
-- `escolhaAnimal.php`: Código PHP que envia os dados da página `escolheranimal.php` para a Base de Dados.
+- `escolhaAnimal.php`: Código PHP que envia os dados da página `escolheranimal.php` para a base de dados.
 - `escolheranimal.php`: Página de veterinário onde escolhe os animais dos quais quer ser responsável.
 - `footer.php`: Guarda o footer do site para facilitar a manutenção do mesmo.
 - `informacoesanimal.php`: Página principal do site, aqui o utilizador vê as informações do animal, do peso às vacinas.
@@ -28,8 +28,8 @@ O objetivo deste projeto é criar um website chamado "Boletim de Vacinas", o sit
 - `painelAdmin.php`: Página que irá aparecer ao utilizador caso o mesmo seja um administrador do site.
 - `painelCon.php`: Página de veterinário onde o mesmo coloca os dados da consulta.
 - `porAprovar.php`: Página que irá aparecer caso o veterinário ainda não tenha sido aprovado.
-- `registar.php`: Código PHP que envia os dados do registo do dono e do veterinário para a Base de Dados.
-- `registaranimal.php`: Código que envia os dados do registo do animal para a Base de Dados.
+- `registar.php`: Código PHP que envia os dados do registo do dono e do veterinário para a base de dados.
+- `registaranimal.php`: Código que envia os dados do registo do animal para a base de dados.
 - `registaranimalform.php`: Formulário de registo do animal.
 - `registarform.php`: Formulário de registo do dono e veterinário.
 - `removerAnimal.php`: Código PHP que retira o NIF do veterinário da tabela do animal.
