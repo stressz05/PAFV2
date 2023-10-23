@@ -66,12 +66,12 @@
 
                     //. Verifica se a coluna onde está o NIF do dono está vazia, se não estiver 
                     //. pula a iteração do loop e não imprime a linha do animal.
-                
+                    
                     if(!empty($nif_vet)){
                         continue;
                     }
 
-                    echo "<tr id='click'>";
+                    echo "<tr class='click'>";
                     echo "<td class='tableRows' style='text-align: center'>";
                     echo "<a class='aTable' href='assets/files/escolhaAnimal.php?id_animal=" . $linhas['ID_Animal'] . "'>" . $linhas['ID_Animal'] . "</a></td>";
                     echo "<td class='tableRows' style='text-align: center'>" . $linhas['Nome'] . "</td>";
@@ -109,14 +109,20 @@
         }
     }
 
-        const clique = document.getElementById('click');
+    //. Adicionado um evento que se irá ativar quando a página carregar Completamente
+    document.addEventListener('DOMContentLoaded', function() {
+        const clique = document.getElementsByClassName('click'); //! Variável que guarda os elementos com a classe "click"
 
-        clique.addEventListener('click', event => {
-            if(event.target.tagName === 'TD'){
-                const idAnimal = clique.querySelector('.aTable').getAttribute('href').split('=')[1];
-                window.location.href = `assets/files/escolhaAnimal.php?id_animal=${idAnimal}`;
-            }
-        });
+        for (let i = 0; i < clique.length; i++) {
+            clique[i].addEventListener('click', event => {
+                if (event.target.tagName === 'TD') {
+                    //. Aqui recolhe o link que está guardado na primeira coluna da tabela e divide-o pelo igual, ficando só com o ID
+                    const idAnimal = event.currentTarget.querySelector('.aTable').getAttribute('href').split('=')[1];
+                    window.location.href = 'assets/files/escolhaAnimal.php?id_animal=' + idAnimal; //. Criado o link para ser usado na linha toda da tabela, passando por parametro o ID
+                }
+            });
+        }
+    });
     </script>
 
     <?php include "assets/files/footer.php" ?>
