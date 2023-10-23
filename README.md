@@ -57,7 +57,7 @@ O projeto foi desenvolvido utilizando o Visual Studio Code como IDE.
 
 ### Notas
 
-Este repositório **_não_inclui_** todos os arquivos necessários para o funcionamento do site.
+Este repositório **_não inclui_** todos os arquivos necessários para o funcionamento do site.
 Os arquivos em falta são:
 - `verificacao.php`
 - `conexao.php`
@@ -134,7 +134,7 @@ The project was developed using Visual Studio Code as the IDE.
 
 ### Notes
 
-This repository **_does_not include_** all the files necessary for the site to function.
+This repository **_does not include_** all the files necessary for the site to function.
 The missing files are:
 - `verificacao.php`
 - `conexao.php`
