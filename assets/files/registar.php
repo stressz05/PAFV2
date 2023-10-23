@@ -50,9 +50,10 @@
                 echo "Erro no registo.";
                 exit;
             }
-    
-            $sql = "INSERT INTO veterinario (Nome_Vet, Password_Vet, NIF_Vet) 
-                        VALUES ('$vet_username','$v_passwordCompleta','$vet_nif')";
+            $data = date("d-m-y");
+
+            $sql = "INSERT INTO veterinario (Nome_Vet, Password_Vet, NIF_Vet, status, Data_Pedido) 
+                        VALUES ('$vet_username','$v_passwordCompleta','$vet_nif', 'pendente', '$data')";
     
             if($conn->query($sql) === TRUE){
                 header('Location: /');
