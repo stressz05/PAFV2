@@ -55,25 +55,7 @@
         </div>
     </div>
     
-    <script>
-        var toggle = document.getElementById('checkboxPwd');
-        var text = document.getElementById('MostrarPwd');
-        toggle.addEventListener("click", checkPwd, false);
-
-        function checkPwd(event) {
-            if (this.checked) {
-                text.style.fontWeight = "bold";
-                text.style.color = "black";
-                password.type = "text";
-                cPassword.type = "text";
-            } else {
-                text.style.fontWeight = "normal";
-                text.style.color = "rgb(168, 168, 168)";
-                password.type = "password";
-                cPassword.type = "password";
-            }
-        }
-    </script>
+    <script src="togglePwd.js"></script>
 </body>
 
 <?php include "assets/files/footer.php";?>
