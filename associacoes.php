@@ -138,6 +138,14 @@
     function atualizarMapa(IDLink) {
         var iframe = document.getElementById('mapa');
         iframe.src = linksMapa[IDLink];
+
+        //. Scroll automático para a Iframe ao selecionar um link.
+        var elementoIframe = document.getElementById("mapa");
+        var scroll = elementoIframe.getBoundingClientRect().top + window.scrollY; //!Obtem a distancia da iframe até ao topo da janela
+        window.scrollTo({ 
+            top: scroll, 
+            behavior: "smooth" 
+        });
     };
 
     document.getElementById('associacao1').addEventListener('click', function (e) {
