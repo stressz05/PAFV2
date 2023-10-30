@@ -53,8 +53,8 @@ if (isset($_SESSION['loggedin'])) {
                 echo "<div class='containerPainel'>";
                 echo "<div class='left'>";
                 echo "<p class='pBlocks'><strong>Nome: </strong>" . $nome . "</p>";
-                echo "<p class='pBlocks'><strong>Nome Vacina: </strong><br><input style='font-weight: 600; color: black' class='input' placeholder='$nomeVac' disabled>" . "</input></p>";
-                echo "<p class='pBlocks'><strong>Data de Administração: </strong><br><input style='font-weight: 600; color: black' class='input' placeholder='$data' disabled>" . "</input></p>";
+                echo "<p class='pBlocks'><strong>Ação realizada: </strong><br><input style='font-weight: 600; color: black' class='input' placeholder='$nomeVac' disabled>" . "</input></p>";
+                echo "<p class='pBlocks'><strong>Data: </strong><br><input style='font-weight: 600; color: black' class='input' placeholder='$data' disabled>" . "</input></p>";
                 echo "<p class='pBlocks'><strong>Descrição da Vacina: </strong><br><textArea style='font-weight: 600; color: black' class='textArea' placeholder='$descVac' disabled>" . "</textArea></p>";
                 echo "</div>";
                 echo"<div class='right'>";
