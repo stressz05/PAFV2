@@ -16,19 +16,19 @@ if ($_SESSION['tipoUser'] == 'vet') {
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 
-<body class="body" onload="boasVindas()">
+<body class="body">
     <!-- Cria a barra de navegação do Site-->
     <?php include "assets/files/navbar.php"; ?>
 
     <div class="boasVindas">
-        <p><strong>Olá</strong> <?php ($_SESSION['tipoUser'] === 'dono') ? print($_SESSION['nome_dono']) : print($_SESSION['nome_vet']); ?>!</p>
+        <p><strong>Olá</strong> <?php print($_SESSION['nome_dono']) ?>!</p>
     </div>
 
     <!-- Cria uma pequena área que irá conter as informações do animal-->
     <div class="infoP">
         <p>Informações básicas do animal: </p>
     </div>
-    
+
     <div class="info">
         <?php
         require "assets/files/conexao.php";
@@ -65,47 +65,45 @@ if ($_SESSION['tipoUser'] == 'vet') {
     <div class="infoP">
         <p>Vacinas do Animal:</p>
     </div>
-    <div class="centered">
-        <div class="block">
-            <?php 
-            require "assets/files/conexao.php";
 
-            $nif = $_SESSION['nif_dono'];
-            $sqlID = "SELECT ID_Animal, ID_Consulta FROM animal WHERE NIF_Dono = '$nif'";
-            $sqlID_query = $conn->query($sqlID);
+    <div class="block" style="margin-left: 5%">
+        <?php
+        require "assets/files/conexao.php";
 
-            if($sqlID_query == true){
-                $linhasID = $sqlID_query->fetch_assoc();
-                $id = $linhasID['ID_Animal'];
-                $idCon = $linhasID['ID_Consulta'];
-            }
+        $nif = $_SESSION['nif_dono'];
+        $sqlID = "SELECT ID_Animal, ID_Consulta FROM animal WHERE NIF_Dono = '$nif'";
+        $sqlID_query = $conn->query($sqlID);
 
-            $sql = "SELECT Nome_Vacina, Descricao_Vacina, Peso, Data, Observacoes FROM consulta WHERE ID_Animal = '$id' AND ID_Consulta = '$idCon'";
-            $sql_query = $conn->query($sql);
-            
-            if($sql_query == true){
-                while($linhas = $sql_query->fetch_assoc()){
-                    $nomeVac = $linhas['Nome_Vacina'];
-                    $descVac = $linhas['Descricao_Vacina'];
-                    $peso = $linhas['Peso'];
-                    $data = $linhas['Data'];
-                    $obs = $linhas['Observacoes'];
+        if ($sqlID_query == true) {
+            $linhasID = $sqlID_query->fetch_assoc();
+            $id = $linhasID['ID_Animal'];
+            $idCon = $linhasID['ID_Consulta'];
+        }
 
-                    echo "<div class=b-row style='height: fit-content'>";
-                    echo "<strong>Vacina: </strong>" . $nomeVac . "<br>";
-                    if($descVac != ''){
-                        echo "<strong>Descrição: </strong><br>" . $descVac . "<br>";
-                    }
-                    echo "<strong>Peso: </strong>" . $peso . "Kg" . "<br>";
-                    echo "<strong>Data: </strong>" . $data . "<br>";
-                    echo "<strong>Observações: </strong><br>" . $obs;
-                    echo "</div>";
+        $sql = "SELECT Nome_Vacina, Descricao_Vacina, Peso, Data, Observacoes FROM consulta WHERE ID_Animal = '$id' AND ID_Consulta = '$idCon'";
+        $sql_query = $conn->query($sql);
+
+        if ($sql_query == true) {
+            while ($linhas = $sql_query->fetch_assoc()) {
+                $nomeVac = $linhas['Nome_Vacina'];
+                $descVac = $linhas['Descricao_Vacina'];
+                $peso = $linhas['Peso'];
+                $data = $linhas['Data'];
+                $obs = $linhas['Observacoes'];
+
+                echo "<div class=b-row style='height: fit-content'>";
+                echo "<strong>Ação realizada: </strong>" . $nomeVac . "<br>";
+                if ($descVac != '') {
+                    echo "<strong>Descrição: </strong><br>" . $descVac . "<br>";
                 }
+                echo "<strong>Peso: </strong>" . $peso . "Kg" . "<br>";
+                echo "<strong>Data: </strong>" . $data . "<br>";
+                echo "<strong>Observações: </strong><br>" . $obs;
+                echo "</div>";
             }
-            ?>
-        </div>
+        }
+        ?>
     </div>
-
     <?php include "assets/files/footer.php"; ?>
 </body>
 
