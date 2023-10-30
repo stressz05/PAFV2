@@ -40,7 +40,7 @@
             <!--* 2ª Associação-->
             <div class="b-row">
                 <p class="tituloAssociacao"><strong>União Zoófila</strong></p>
-                <p class="pBlocks"><strong>Telefone:</strong> 760 501 015 (0.60€ + IVA)</p>
+                <p class="pBlocks"><strong>Telefone:</strong> 760 501 015 <span style="font-size: smaller;">(0.60€ + IVA)</span></p>
                 <p class="pBlocks"><strong>Email:</strong> uniaozoofila@gmail.com</p>
                 <p class="pBlocks">
                     <a href="https://www.uniaozoofila.org/" target="_blank">
@@ -88,7 +88,7 @@
             <!--* 5ª Associação-->
             <div class="b-row">
                 <p class="tituloAssociacao"><strong>Associação Midas</strong></p>
-                <p class="pBlocks"><strong>Telefone:</strong> 760 501 670 (0.60€ + IVA)</p>
+                <p class="pBlocks"><strong>Telefone:</strong> 760 501 670 <span style="font-size: smaller;">(0.60€ + IVA)</span></p>
                 <p class="pBlocks"><strong>Email:</strong> midas@associacaomidas.org</p>
                 <p class="pBlocks">
                     <a href="https://www.associacaomidas.org/" target="_blank">
