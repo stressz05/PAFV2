@@ -41,26 +41,23 @@ if (isset($_SESSION['loggedin'])) {
         $_SESSION['idConsulta'] = $idCon;
     }
     ?>
-    <div class="centeredCon">
-    <a class='prevCon' href='animais.php'>Cancelar</a>
-    </div>
-    <form action="assets/files/consulta.php" method="post">
+    <form action="assets/files/consulta.php" method="post" id='consulta'>
         <div class="centeredCon">
             <div class="containerPainel">
                 <div class="left">
                     <p class="pBlocks"><strong>Nome: </strong><?php echo $nome; ?></p>
                     <div class="pBlocks">
                         <label>
-                            <strong>Nome da Vacina: </strong>
+                            <strong>Ação realizada: </strong>
                             <br>
-                            <input class="input" name="nomeVac" type="text" required>
+                            <input class="input" name="nomeVac" id="action" type="text" required>
                         </label>
                     </div>      
                     <div class="pBlocks">
                         <label>
-                            <strong>Data de administração: </strong>
+                            <strong>Data: </strong>
                             <br>
-                            <input class="input" name="dataVac" type="date" required>
+                            <input class="input" name="dataVac" id="date" type="date" required>
                         </label>
                     </div>
                     <div class="pBlocks">
@@ -78,31 +75,43 @@ if (isset($_SESSION['loggedin'])) {
                         <label>
                             <strong>Peso: </strong>
                             <br>
-                            <input class="input" type="text" name="peso" placeholder=" Peso anterior: <?php echo $peso; ?>Kg" required>
+                            <input class="input" type="text" name="peso" id="weight" placeholder=" Peso anterior: <?php echo $peso; ?>Kg" required>
                         </label>
                     </div>
                     <div class="pBlocks">
                         <label>
                             <strong>Observações: </strong>
                             <br>
-                            <textarea class="textArea" name="obs" style="height: 240px" spellcheck="true" required></textarea>
+                            <textarea class="textArea" name="obs" id="obs" style="height: 240px" spellcheck="true" required></textarea>
                         </label>
                     </div>
                 </div>
             </div>
         </div>
         <div class="centeredCon">
-            <button class="btnEscolherAnimal" type="submit">Confirmar</button>
+            <a class="prevCon" id="canc" style="margin-right: 5px;" href='animais.php'>Cancelar</a> 
+            <a class="prevCon" id="con" onclick="submitConsulta()">Confirmar</a>
+        </div>
+        <div class="centeredCon" style="margin-top: 5px;">
+            <?php echo "<a class='prevCon' href='consultasAnteriores.php?id=$id'>Consultas anteriores</a>"; ?>
         </div>
     </form>
-
-    <?php 
-        echo "<div class='centeredCon'>";
-        echo "<a class='prevCon' href='consultasAnteriores.php?id=$id'>Consultas Anteriores</a>";
-        echo "</div>"
-    ?>
-
     <?php include "assets/files/footer.php" ?>
 </body>
 
+<script>
+    function submitConsulta(){
+        let action = document.getElementById('action').value
+        let date = document.getElementById('date').value
+        let weight = document.getElementById('weight').value
+        let obs = document.getElementById('obs').value
+
+        if(action.length !== 0 && date.length !== 0 && weight.length !== 0 && obs.length !== 0){
+            document.getElementById('consulta').submit()
+        } else {
+            alert("Por favor preencha os campos.")
+        }
+        
+    }
+</script>
 </html>
