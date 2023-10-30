@@ -2,8 +2,8 @@
 
 .body {
     font-family: 'Work Sans';
-    background-color: #f8eba390;
-    /*. o 90 é a opacidade*/
+    background-color: rgba(248, 235, 163, 0.60);
+    /*. o 0.60 é a opacidade*/
     font-size: x-large;
     color: black;
     font-weight: bold;
@@ -42,22 +42,26 @@
 
 .textNavBar:hover {
     color: rgb(173, 173, 173);
-    font-size: 25px;
+    text-decoration: underline white;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
 }
 
 .button {
-    border-radius: 25px;
+    border-radius: 10px;
     width: fit-content;
     align-self: center;
-    margin-top: 20px;
-    transform: scale(1.5);
-    border-color: #ffffff;
-    background-color: #ffffff;  
+    margin-top: 30px;
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid white;
+    background-color: white; 
+    padding: 5px;
 } 
 
 .button:hover{
-    border-color: #000000;
-    transform: scale(1.55);
+    border-color: black;
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -106,7 +110,7 @@
     text-align: center;
     color: white;
     background-color: rgb(39, 39, 39);
-    border-top: solid 1px #000;
+    border-top: solid 1px black;
     font-size: 15px;        
     position: fixed; 
     bottom: 0;
@@ -117,8 +121,8 @@
 .table-container {
     max-height: 450px;
     border-radius: 15px;
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow-y: scroll;
+    overflow-x: auto;
     box-shadow: 0 0 8px black;
 } 
 
@@ -169,13 +173,13 @@ tr:hover .tableRows:first-child{
 
 .info {
     text-align: left;
-    margin-left: 240px;
+    margin-left: 5%;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     border-bottom-left-radius: 15px;
     font-weight: 400;
     padding-left: 5px;
-    width: 1435px;
+    width: 80%;
 }
 
 .block{
@@ -204,8 +208,8 @@ tr:hover .tableRows:first-child{
 }
 
 .numAssociacao{
-    color: gray;
-    opacity: 80%;
+    color: black;
+    opacity: 70%;
     margin: 5px;
     padding-left: 8px;
     float: right;
@@ -226,7 +230,7 @@ tr:hover .tableRows:first-child{
 .p-associacoes{
     font-weight: 500;
     text-decoration: underline;
-    text-shadow: #000;
+    text-shadow: black;
 }
 
 .boasVindas{
@@ -239,7 +243,7 @@ tr:hover .tableRows:first-child{
 .a-mapa-associacoes{
     font-weight: 400;
     text-decoration: none;
-    color: #000000;
+    color: black;
     margin: 5px;
 }
 
@@ -262,7 +266,7 @@ tr:hover .tableRows:first-child{
 .infoP {
     text-align: left;
     font-weight: 600;
-    margin-left: 180px;
+    margin-left: 5%;
     margin-bottom: 0;
     padding: 0;
     text-decoration: underline;
@@ -312,23 +316,7 @@ tr:hover .tableRows:first-child{
     justify-content: baseline;
 }
 
-.btnEscolherAnimal{
-    background-color: #fff;
-    border-color: #fff;
-    width: fit-content;
-    transform: scale(1.25);
-    border-radius: 15px;
-    align-self: center;
-    margin-top: 10px;
-}
-
-.btnEscolherAnimal:hover {
-    border-color: #000000;
-    transform: scale(1.30);
-    cursor: pointer;
-}
-
-.blocksAnimais{
+.blocksAnimais, .blockAprovar{
     text-align: left;
     display: grid;
     grid-template-rows: repeat(2, 1fr);
@@ -340,13 +328,18 @@ tr:hover .tableRows:first-child{
 .btnPainel{
     color: #000000;
     text-decoration: none;
-    transform: scale(1.25);
-    background-color: #fff;
+    font-size: 18px;
+    background-color: white;
     border: 1px solid black;
     border-radius: 10px;
     align-self: left;
     width: fit-content;
     padding: 3px;
+}
+
+.btnPainel:hover{
+    font-weight: 600;
+    background-color: whitesmoke;
 }
 
 .formEscolher {
@@ -406,7 +399,7 @@ tr:hover .tableRows:first-child{
 
 .aTable{
     text-decoration: none;
-    color: #000000;
+    color: black;
 }
 
 .centeredCon {
@@ -432,6 +425,17 @@ tr:hover .tableRows:first-child{
     background-color: whitesmoke;
     border: 1px solid black;
     font-weight: 600;
+}
+
+#con:hover{
+    color: rgb(7, 192, 7);
+    border-color: green;
+    cursor: pointer;
+}
+
+#canc:hover{
+    color: red;
+    border-color: rgb(201, 3, 3);
 }
 
 .blockAdmin {
@@ -503,4 +507,32 @@ tr:hover .tableRows:first-child{
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-bottom: 40px;
+}
+
+@media (min-width: 500px) {
+    .block, .blockAprovar, .blockDelete, .blockAdmin, .blocksAnimais {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 750px){
+    .blockAprovar, .blockDelete, .blockAdmin {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1000px){
+    .block, .blocksAnimais{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1400px){
+    .block, .blockAdmin {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .blockDelete {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
