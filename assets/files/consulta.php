@@ -22,7 +22,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     if($conn->query($sql) === TRUE){
         $sqlUpdate = "UPDATE animal SET Peso = '$peso' WHERE ID_Animal = '$idAnimal'";
         if($conn->query($sqlUpdate) === TRUE){
-            echo 'Valores inseridos com sucesso.';
+            header("Location: /animais.php");
         }
     } else {
         echo 'Ups! Erro...' . "<br>" . $conn->error;
