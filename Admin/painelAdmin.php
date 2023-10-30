@@ -45,7 +45,7 @@
     </div>
 
     <div class="centered">
-        <a href="/assets/files/logout.php" class="btnAdmin" style="margin-top: 0;">Logout</a>
+        <a href="/assets/files/logout.php" class="btnAdmin" style="margin-top: 0; margin-bottom: 50px;">Logout</a>
     </div>
 
     <?php include "../assets/files/footer.php"; ?>
