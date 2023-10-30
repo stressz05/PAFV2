@@ -30,7 +30,7 @@
     </div>
 
     <div class="centered">
-        <div class="blocksAnimais">
+        <div class="blockAprovar">
             <?php 
                 require "../assets/files/conexao.php"; 
 
