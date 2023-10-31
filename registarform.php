@@ -55,9 +55,7 @@
         </div>
     </div>
     
-    <script src="togglePwd.js"></script>
+    <script src="assets/JS/togglePwd.js"></script>
+    <?php include "assets/files/footer.php";?>
 </body>
-
-<?php include "assets/files/footer.php";?>
-
 </html>
