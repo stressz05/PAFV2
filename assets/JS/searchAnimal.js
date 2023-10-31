@@ -1,18 +1,18 @@
 function searchAnimal() {
     var input = document.getElementById("nome_animal");
-    var table = document.querySelector(".table");
+    var filter = input.value.toUpperCase();
+    var table = document.getElementById("table");
     var rows = table.getElementsByTagName("tr");
     
-    //. Percorre as linhas da tabela começando no índice 1 (linha 2)
-    for (var i = 1; i < rows.length; i++) {
-        var idCell = rows[i].getElementsByTagName("td")[1]; //. Obtém a célula com o ID do animal em cada iteração.
-        var idText = idCell.textContent || idCell.innerText; //. Guarda o texto da célula, no caso, o ID do animal.
-
+    //. Percorre as linhas da tabela ignorando o cabeçalho.
+    for(var i = 1; i < rows.length; i++){
+        td = rows[i].getElementsByTagName("td")[1]; //. Guarda a célula da coluna "Nome" em cada iteração.
+        txtValue = td.innerText; //. Guarda o valor que é mostrado da célula em cada iteração
         //. Função indexOf = devolve o índice de um determinado valor em uma string, caso não encontre devolve -1.
-        if (idText.indexOf(input.value) > -1) { //. Verifica se o valor guardado no input existe no array idText.
-            rows[i].style.display = "";
+        if(txtValue.toUpperCase().indexOf(filter) > -1){ //? Verifica se o que está guardado na var txtValue existe.
+            rows[i].style.display = ""; //. Mostra a célula caso o valor exista.
         } else {
-            rows[i].style.display = "none";
+            rows[i].style.display = "none"; //. Esconde a célula caso o valor seja diferente
         }
     }
 }
