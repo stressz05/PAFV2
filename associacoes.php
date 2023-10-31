@@ -1,5 +1,6 @@
 <?php
     require "assets/files/verificacao.php";
+    $active = "pag2";
 ?>
 
 <!DOCTYPE html>
@@ -107,7 +108,7 @@
                 <p class="pBlocks"><strong>Telefone:</strong> 910 022 248</p>
                 <p class="pBlocks"><strong>Email:</strong> vivanimal@gmail.com</p>
                 <p class="pBlocks">
-                    <a href="https://associacaovivanimal.pt/" target="_blank">
+                    <a href="https://www.facebook.com/VivanimalGondomar/?locale=pt_PT" target="_blank">
                         <img class="imgBlocks" title="Site da associação" src="assets\imagens\VA.png">
                     </a>
                 </p>

@@ -1,6 +1,6 @@
 <?php
 require "assets/files/verificacao.php";
-
+$active = "pag3";
 if (isset($_SESSION['loggedin'])) {
     if ($_SESSION['tipoUser'] === 'dono') {
         header("Location: assets/files/acessonegado.php");
@@ -34,7 +34,7 @@ if (isset($_SESSION['loggedin'])) {
 
     <div class="centered" style="margin-top: 30px;">
         <div class="table-container">
-        <table class="table">
+        <table class="table" id="table">
             <tr>
                 <th class="tableHeader">ID</th>
                 <th class="tableHeader">Nome</th>
@@ -72,8 +72,9 @@ if (isset($_SESSION['loggedin'])) {
                     }
 
                     echo "<tr class='click'>";
-                    echo "<td class='tableRows' style='text-align: center'>";
-                    echo "<a class='aTable' href='assets/files/escolhaAnimal.php?id_animal=" . $linhas['ID_Animal'] . "'>" . $linhas['ID_Animal'] . "</a></td>";
+                    echo "<td class='tableRows' style='text-align: center'>
+                          <a class='aTable' href='assets/files/escolhaAnimal.php?id_animal=" . $linhas['ID_Animal'] . "'>" . $linhas['ID_Animal'] . "</a>
+                          </td>";
                     echo "<td class='tableRows' style='text-align: center'>" . $linhas['Nome'] . "</td>";
                     echo "<td class='tableRows' style='text-align: center'>" . $linhas['Raca'] . "</td>";
                     echo "<td class='tableRows' style='text-align: center'>" . $linhas['Especie'] . "</td>";

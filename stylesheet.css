@@ -35,12 +35,20 @@
 
 .textNavBar {
     color: white;
-    font-size: 22px;
+    font-size: 20px;
     margin-right: 25px;
     text-decoration: none;
 }
 
+.textNavBar.active{
+    font-size: 22px;
+    text-decoration: underline white;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 2px;
+}
+
 .textNavBar:hover {
+    font-size: 22px;
     color: rgb(173, 173, 173);
     text-decoration: underline white;
     text-underline-offset: 4px;
@@ -119,6 +127,9 @@
 }
 
 .table-container {
+    margin-left: 40px;
+    margin-right: 40px;
+    width: 1500px;
     max-height: 450px;
     border-radius: 15px;
     overflow-y: scroll;
@@ -126,10 +137,26 @@
     box-shadow: 0 0 8px black;
 } 
 
+.table-container::-webkit-scrollbar{
+    width: 0px;
+    height: 10px;
+    border: 1px solid white;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: whitesmoke;
+}
+  
+.table-container::-webkit-scrollbar-thumb {
+    border-radius: 0;
+    background: rgb(39, 39, 39);
+    border-radius: 5px;
+}
+
 .table {
     border: 1px solid black;
     border-spacing: 0px;
-    width: 1500px;
+    width: 100%;
 }
 
 .tableHeader {

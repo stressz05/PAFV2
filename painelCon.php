@@ -1,5 +1,6 @@
 <?php
 require "assets/files/verificacao.php";
+$active = "pag4";
 if (isset($_SESSION['loggedin'])) {
     if ($_SESSION['tipoUser'] === 'dono') {
         header("Location: assets/files/acessonegado.php");
