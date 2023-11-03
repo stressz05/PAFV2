@@ -47,7 +47,7 @@
                     <div>
                         <input class="input" type="text" id="genero" name="genero" placeholder="Género" required>
                     </div>
-                    <button class="button" type="submit">Registar</button>
+                    <button class="button" style="margin-top: 10px;" type="submit">Registar</button>
                 </div>
             </form>
             <div class="label">
