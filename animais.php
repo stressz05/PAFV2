@@ -20,7 +20,16 @@ if (isset($_SESSION['loggedin'])) {
 </head>
 
 <body class="body">
-    <?php include "assets/files/navbar.php" ?>
+    <?php 
+        include "assets/files/navbar.php";
+        if(!isset($_SESSION['msg'])){
+            $_SESSION['msg'] = false;
+        }
+        if($_SESSION['msg'] == true){
+            echo "<script>alert('Consulta guardada com sucesso!')</script>";
+            $_SESSION['msg'] = false;
+        }
+    ?>
     <div class="centered">
         <p class="p">Nesta página irão aparecer os animais pelos quais você é responsável</p>
     </div>

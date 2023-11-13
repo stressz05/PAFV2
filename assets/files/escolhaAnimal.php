@@ -18,6 +18,7 @@ if ($result_check->num_rows > 0) {
     $sql = "UPDATE animal SET NIF_Vet = '$nifVet' WHERE ID_Animal = '$id'";
 
     if ($conn->query($sql) === TRUE) {
+        $_SESSION['msg'] = true;
         header("Location: /escolheranimal.php");
     } else {
         echo "<div style='color: red; font-size: 22px;'>Ups! Alguma coisa correu mal :(</div>" . "<br>" . $conn->error;

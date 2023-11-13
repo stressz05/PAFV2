@@ -49,6 +49,13 @@ if (isset($_SESSION['loggedin'])) {
             <?php
             require "assets/files/conexao.php";
 
+            if(!isset($_SESSION['msg'])){
+                $_SESSION['msg'] = false;
+            }
+            if($_SESSION['msg'] == true){
+                echo "<script>alert('Animal escolhido com sucesso!')</script>";
+                $_SESSION['msg'] = false;
+            }
             $sql = "SELECT * FROM animal";
             $sql_query = $conn->query($sql);
 

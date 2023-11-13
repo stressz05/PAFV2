@@ -41,7 +41,7 @@ if (isset($_SESSION['loggedin'])) {
         $sql = "SELECT * FROM consulta WHERE ID_Animal = '$id'";
         $sql_query = $conn->query($sql);
 
-        if($sql_query == true){
+        if($sql_query->num_rows > 0){
         
             while($linhas = $sql_query->fetch_assoc()){
                 $nomeVac = $linhas['Nome_Vacina'];
@@ -65,6 +65,8 @@ if (isset($_SESSION['loggedin'])) {
                 echo "</div>";
                 echo"</div>";
             }
+        } else {
+            echo "<div class='centeredCon' style='font-weight: 400; margin-bottom:20px;'>Nenhuma consulta em registo.</div>";
         }
     ?>
 
