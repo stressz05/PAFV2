@@ -64,7 +64,7 @@ if ($_SESSION['tipoUser'] == 'vet') {
         echo "<label id='labelMonth' hidden> <input type='checkbox' name='typeAge' value='month' id='month'>Meses</label>";
         echo "<label id='labelYear' hidden><input type='checkbox' name='typeAge' value='year' id='year'>Anos</label></p>";
         echo "<p id='size'><strong>Tamanho:</strong> " . $tamanho .  "</p>";
-        echo "<p id='weight'><strong>Peso:</strong> " . "<span id='weightV'>" . $peso . "Kg" . "</span>" . "<input class='editarInput' type='text' name='weightInput' id='weightInput' hidden>";
+        echo "<p id='weight'><strong>Peso:</strong> " . "<span id='weightV'>" . $peso . "Kg" . "</span>" . "<input class='editarInput' type='number' name='weightInput' id='weightInput' hidden>";
         echo "<input type='submit' class='prevCon' value='Confirmar' id='confirmar' style='float: right;' hidden></input></p>";
         echo "</form>";
         ?>
