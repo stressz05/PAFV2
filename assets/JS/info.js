@@ -34,16 +34,24 @@
         let ageV = document.getElementById('ageV');
         let weightV = document.getElementById('weightV');
         let cancel = document.getElementById('cancel');
+        let yearCB = document.getElementById('year')
+        let monthCB = document.getElementById('month')
 
         image.hidden = false;
         cancel.hidden = true;
         month.style.fontSize = "20px";
         year.style.fontSize = "20px";
         age.hidden = true;
+        age.value = '';
         weight.hidden = true;
+        weight.value = '';
         confirmar.hidden = true;
         month.hidden = true;
+        month.value = '';
+        monthCB.checked = false;
         year.hidden = true;
+        year.value = '';
+        yearCB.checked = false;
         ageV.hidden = false;
         weightV.hidden = false;
     }
