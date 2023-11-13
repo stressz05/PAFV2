@@ -61,7 +61,7 @@ if ($_SESSION['tipoUser'] == 'vet') {
         echo "<img id='cancel' class='edit' src='assets/imagens/cancel.png 'title='Cancelar' onclick='cancelar()' hidden>";
         echo "<p id='name'><strong>Nome:</strong> " . $nome . "</p>";
         echo "<p id='age'><strong>Idade:</strong> " . "<span id='ageV'>" . $idade . " " . $idadeTipo . "</span>" . "<input class='editarInput' type='number' name='ageInput' id='ageInput' hidden>";
-        echo "<label id='labelMonth' hidden>|<input type='checkbox' name='typeAge' value='month' id='month'>Meses</label>";
+        echo "<label id='labelMonth' hidden> <input type='checkbox' name='typeAge' value='month' id='month'>Meses</label>";
         echo "<label id='labelYear' hidden><input type='checkbox' name='typeAge' value='year' id='year'>Anos</label></p>";
         echo "<p id='size'><strong>Tamanho:</strong> " . $tamanho .  "</p>";
         echo "<p id='weight'><strong>Peso:</strong> " . "<span id='weightV'>" . $peso . "Kg" . "</span>" . "<input class='editarInput' type='text' name='weightInput' id='weightInput' hidden>";
