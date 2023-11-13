@@ -20,7 +20,16 @@ if (isset($_SESSION['loggedin'])) {
 </head>
 
 <body class="body">
-    <?php include "assets/files/navbar.php" ?>
+    <?php 
+        include "assets/files/navbar.php";
+        if(!isset($_SESSION['msg'])){
+            $_SESSION['msg'] = false;
+        }
+        if($_SESSION['msg'] == true){
+            echo "<script>alert('Animal escolhido com sucesso!')</script>";
+            $_SESSION['msg'] = false;
+        }
+    ?>
     <div class="centered">
         <p class="p"><span style="color:crimson">AVISO!</span> Só aparecem animais sem veterinário associado</p>
     </div>
@@ -49,13 +58,6 @@ if (isset($_SESSION['loggedin'])) {
             <?php
             require "assets/files/conexao.php";
 
-            if(!isset($_SESSION['msg'])){
-                $_SESSION['msg'] = false;
-            }
-            if($_SESSION['msg'] == true){
-                echo "<script>alert('Animal escolhido com sucesso!')</script>";
-                $_SESSION['msg'] = false;
-            }
             $sql = "SELECT * FROM animal";
             $sql_query = $conn->query($sql);
 

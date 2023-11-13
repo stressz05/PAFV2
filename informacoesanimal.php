@@ -18,7 +18,16 @@ if ($_SESSION['tipoUser'] == 'vet') {
 
 <body class="body">
     <!-- Cria a barra de navegação do Site-->
-    <?php include "assets/files/navbar.php"; ?>
+    <?php 
+        include "assets/files/navbar.php"; 
+        if(!isset($_SESSION['msg'])){
+            $_SESSION['msg'] = false;
+        }
+        if($_SESSION['msg'] == true){
+            echo "<script>alert('Alterações guardadas com sucesso!')</script>";
+            $_SESSION['msg'] = false;
+        }
+    ?>
 
     <div class="boasVindas">
         <p><strong>Olá</strong> <?php print($_SESSION['nome_dono']) ?>!</p>
