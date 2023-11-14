@@ -19,7 +19,7 @@ function searchAnimal() {
 
 //. Adicionado um evento que se irá ativar quando a página carregar Completamente
 document.addEventListener('DOMContentLoaded', function() {
-    const clique = document.getElementsByClassName('click'); //! Variável que guarda os elementos com a classe "click"
+    const clique = document.getElementsByClassName('click'); //! Constante que guarda os elementos com a classe "click"
 
     for (let i = 0; i < clique.length; i++) {
         clique[i].addEventListener('click', event => {
