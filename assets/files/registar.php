@@ -64,5 +64,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
     $conn->close();
 } else {
-    echo ("Acesso não autorizado.");
+    echo "Ocorreu um erro..." . "<br>" . $conn->error;
 }
