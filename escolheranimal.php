@@ -26,7 +26,9 @@ if (isset($_SESSION['loggedin'])) {
             $_SESSION['msg'] = false;
         }
         if($_SESSION['msg'] == true){
-            echo "<script>alert('Animal escolhido com sucesso!')</script>";
+            echo "<script>window.addEventListener('load', function(){
+                alert('Animal escolhido com sucesso!')
+                })</script>";
             $_SESSION['msg'] = false;
         }
     ?>

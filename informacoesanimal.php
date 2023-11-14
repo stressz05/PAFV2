@@ -24,7 +24,9 @@ if ($_SESSION['tipoUser'] == 'vet') {
             $_SESSION['msg'] = false;
         }
         if($_SESSION['msg'] == true){
-            echo "<script>alert('Alterações guardadas com sucesso!')</script>";
+            echo "<script>window.addEventListener('load', function(){
+                alert('Alterações guardadas com sucesso!')
+                })</script>";
             $_SESSION['msg'] = false;
         }
     ?>

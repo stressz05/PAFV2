@@ -26,7 +26,9 @@ if (isset($_SESSION['loggedin'])) {
             $_SESSION['msg'] = false;
         }
         if($_SESSION['msg'] == true){
-            echo "<script>alert('Consulta guardada com sucesso!')</script>";
+            echo "<script>window.addEventListener('load', function(){
+                alert('Consulta guardada com sucesso!')
+                })</script>";
             $_SESSION['msg'] = false;
         }
     ?>
