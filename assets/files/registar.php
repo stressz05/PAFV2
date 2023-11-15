@@ -50,7 +50,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Erro no registo.";
             exit;
         }
-        $data = date("d-m-y");
+        $data = date("d-m-Y"); //? Gera a data de quando o veterinário efetuou registo.
 
         $sql = "INSERT INTO veterinario (Nome_Vet, Password_Vet, NIF_Vet, status, Data_Pedido) 
                         VALUES ('$vet_username','$v_passwordCompleta','$vet_nif', 'pendente', '$data')";
