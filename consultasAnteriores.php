@@ -49,6 +49,10 @@ if (isset($_SESSION['loggedin'])) {
                 $peso = $linhas['Peso'];
                 $data = $linhas['Data'];
                 $obs = $linhas['Observacoes'];
+                
+                if(empty($descVac)){
+                    $descVac = "Não necessária";
+                }
 
                 echo "<div class='centeredCon'>";
                 echo "<div class='containerPainel'>";
