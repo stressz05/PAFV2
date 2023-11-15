@@ -16,9 +16,10 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     $descVac = $_POST['descVac'];
     $peso = $_POST['peso'];
     $obs = $_POST['obs'];
+    $aux = explode("-", $dataVac);
+    $dataVacRev = $aux[2] . "-" . $aux[1] . "-" . $aux[0];
 
-    $sql = "INSERT INTO consulta (ID_Animal, ID_Consulta, Nome_Vacina, Descricao_Vacina, Peso, Data, Observacoes) VALUES ('$idAnimal', '$idConsulta', '$nomeVac', '$descVac', '$peso', '$dataVac', '$obs')";
-
+    $sql = "INSERT INTO consulta (ID_Animal, ID_Consulta, Nome_Vacina, Descricao_Vacina, Peso, Data, Observacoes) VALUES ('$idAnimal', '$idConsulta', '$nomeVac', '$descVac', '$peso', '$dataVacRev', '$obs')";
     if($conn->query($sql) === TRUE){
         $sqlUpdate = "UPDATE animal SET Peso = '$peso' WHERE ID_Animal = '$idAnimal'";
         if($conn->query($sqlUpdate) === TRUE){
@@ -31,6 +32,4 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
 
     $conn->close();
 }
-
-
 ?>
