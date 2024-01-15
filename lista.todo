@@ -1,0 +1,43 @@
+                                                      ╭━━━━╮╭━━━╮   ╭━━━╮╭━━━╮   ╭╮   ╭━━╮╭━━━╮╭━━━━╮
+                                                      ┃╭╮╭╮┃┃╭━╮┃   ╰╮╭╮┃┃╭━╮┃   ┃┃   ╰┫┣╯┃╭━╮┃┃╭╮╭╮┃
+                                                      ╰╯┃┃╰╯┃┃ ┃┃    ┃┃┃┃┃┃ ┃┃   ┃┃    ┃┃ ┃╰━━╮╰╯┃┃╰╯
+                                                        ┃┃  ┃┃ ┃┃    ┃┃┃┃┃┃ ┃┃   ┃┃ ╭╮ ┃┃ ╰━━╮┃  ┃┃
+                                                        ┃┃  ┃╰━╯┃   ╭╯╰╯┃┃╰━╯┃   ┃╰━╯┃╭┫┣╮┃╰━╯┃  ┃┃
+                                                        ╰╯  ╰━━━╯   ╰━━━╯╰━━━╯   ╰━━━╯╰━━╯╰━━━╯  ╰╯
+
+~                       [] - Acabar as caixas das vacinas
+~                           [] - Alinhar as checkboxes ao final da caixas 
+~                           [] - Colocar as permissões (vet pode clicar na checkbox, dono não pode)
+~                           [] - Se a caixa estiver selecionada, aparecer/mudar o texto à frente da checkbox
+*                           [X] - Colocar a data em que foi tomada, procurar funções de Js ou de PHP para isso
+
+*                       [X] - Criar 3 página escondidas para o dono:
+*                           [X] - Escolher animal de que cuida, vai ter todos da BD e depois escolhe
+*                           [X] - Página onde mostra os animais de que está a cuidar
+*                           [X] - Painel de administração das vacinas
+*                       [X] - informacoes.php - Aparece as vacinas que o animal da pessoa levou
+*                       [X] - Meter o nif do dono em session para mandar para o animal.
+*                       [X] - Criar tabela "Consultas"
+*                         [X] - ID_Animal + ID_Consulta
+*                         [X] - Nome vacina
+*                         [X] - Descrição da vacina
+*                         [X] - Data administração da vacina
+*                         [X] - Observaçoes
+*                       [X] - Meter o editar.php a funcionar.
+
+& --- 
+
+-                       [] - Acabar relatório
+                             [] - Ponto 4
+                             [] - Acabar de colocar e explicar o código
+*                            [X] - Fazer o indíce de figuras
+!                                   - Manter atualizado
+-                            [] - Conclusão
+
+.                       LEGENDA:
+
+-                       Amarelo: Por fazer
+*                       Verde: Feito
+!                       Vermelho: Informação
+?                       Azul: Opcional
+~                       Ciano: Cancelado
