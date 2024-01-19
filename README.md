@@ -55,16 +55,6 @@ O objetivo deste projeto é criar um website chamado "Boletim de Vacinas", o sit
 
 O projeto foi desenvolvido utilizando o Visual Studio Code como IDE.
 
-### Notas
-
-Este repositório **_não inclui_** todos os arquivos necessários para o funcionamento do site.
-Os arquivos em falta são:
-- `verificacao.php`
-- `conexao.php`
-
-Decidi não colocá-los principalmente por razões de segurança.
-Caso queira os ficheiros, peço que entre em contacto comigo.
-
 ### Contribuições
 
 Contribuições são bem-vindas! Se tiver sugestões ou melhorias para o projeto, por favor, crie um pull request.
@@ -131,16 +121,6 @@ The goal of this project is to create a website called "Vaccine Bulletin", which
 ### IDE
 
 The project was developed using Visual Studio Code as the IDE.
-
-### Notes
-
-This repository **_does not include_** all the files necessary for the site to function.
-The missing files are:
-- `verificacao.php`
-- `conexao.php`
-
-It was decided by me not to place them mainly for safety reasons.
-If you want the files, please contact me.
 
 ### Contributions
 
